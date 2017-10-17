@@ -14,6 +14,9 @@ fun main(args: Array<String>) {
     val jGraphTGraph3 = buildMimEqualsThreeGraph()
     val graph3 = JGraphTImporter.importGraph(jGraphTGraph3)
     println(graph3)
+
+    val graph4 = Graph6Importer.importGraph("F]~vo")
+    println(graph4)
 }
 
 private fun buildMimEqualsOneGraph(): JGraphTGraph<Int, DefaultEdge> {

@@ -26,21 +26,27 @@ fun main(args: Array<String>) {
     graph3.putEdge(1, 2)
     graph3.putEdge(1, 4)
     graph3.putEdge(2, 5)
-    graph3.putEdge(2,3)
-    graph3.putEdge(3,5)
+    graph3.putEdge(2, 3)
+    graph3.putEdge(3, 5)
     graph3.putEdge(3, 4)
-    graph3.putEdge(3,6)
-    graph3.putEdge(4,5)
+    graph3.putEdge(3, 6)
+    graph3.putEdge(4, 5)
     graph3.putEdge(5, 7)
     val decomposition = TreeDecompositor(graph3).compute()
     println(decomposition)
 
 }
 
-
-class TreeDecompositor<T>(private val graph: Graph<T>) {
+class TreeDecompositor<T>(
+        private val graph: Graph<T>,
+        private val firstTieBreaker: (Collection<T>) -> Collection<T> = { s -> listOf(s.first()) },
+        private val secondTieBreaker: (Collection<T>) -> T = { s -> s.first() },
+        private val iterations: Int = 100
+) {
 
     private val random = Random()
+    //private val firstTieBreaker: (Collection<T>) -> T = { s -> s.first() }
+    //private val iterations = 100
 
     fun compute(): Graph<Set<T>> {
         val tree = GraphBuilder.undirected().build<Set<T>>()
@@ -77,7 +83,6 @@ class TreeDecompositor<T>(private val graph: Graph<T>) {
             throw IllegalArgumentException("Graph must have at least one vertex")
         }
         var smallestMim = Int.MAX_VALUE
-        var smallestMimVertex = vertices.first() // Will be definitely overwritten since (|V| > 1)
         var smallestMimVertices = mutableSetOf<T>() // Will be definitely overwritten since (|V| > 1)
         for(vertex in vertices) {
             // mim(S) = if isolated 0 else 1
@@ -88,15 +93,21 @@ class TreeDecompositor<T>(private val graph: Graph<T>) {
             val maxMim = maxOf(mimS, mimVminusS)
             if (maxMim < smallestMim) {
                 smallestMim = maxMim
-                smallestMimVertex = vertex
                 smallestMimVertices = mutableSetOf(vertex)
             } else if (maxMim == smallestMim) {
                 smallestMimVertices.add(vertex)
             }
         }
-        //TODO Tie breaking
-        //return breakTie(smallestMimVertices)
-        return smallestMimVertex
+        return if (smallestMimVertices.size == 1) {
+            smallestMimVertices.first()
+        } else {
+            smallestMimVertices = firstTieBreaker(smallestMimVertices).toMutableSet()
+            if (smallestMimVertices.size == 1) {
+                smallestMimVertices.first()
+            } else {
+                secondTieBreaker(smallestMimVertices)
+            }
+        }
     }
 
     // Graph should be a cut
@@ -104,7 +115,7 @@ class TreeDecompositor<T>(private val graph: Graph<T>) {
         val remainingEdges = HashSet(graph.edges())
         var maximumInducedMatching = emptySet<EndpointPair<T>>()
         //TODO only run several times if random choice was needed
-        for (i in 1..100) {
+        for (i in 1..iterations) {
             val maximumInducedMatchingTemp = HashSet<EndpointPair<T>>()
             while (remainingEdges.isNotEmpty()) {
                 val edgesWithLowestDegrees = ArrayList<EndpointPair<T>>()
@@ -119,7 +130,7 @@ class TreeDecompositor<T>(private val graph: Graph<T>) {
                         edgesWithLowestDegrees.add(edge)
                     }
                 }
-                val selectedEdge = if (edgesWithLowestDegrees.size == 1)remainingEdges.first() else breakTie(edgesWithLowestDegrees)
+                val selectedEdge = if (edgesWithLowestDegrees.size == 1) remainingEdges.first() else breakTieRandomly(edgesWithLowestDegrees)
                 remainingEdges.remove(selectedEdge)
 
                 for (node in selectedEdge) {
@@ -141,11 +152,9 @@ class TreeDecompositor<T>(private val graph: Graph<T>) {
         return maximumInducedMatching
     }
 
-    private fun <S> breakTie(edges: Collection<S>) : S {
+    private fun <S> breakTieRandomly(edges: Collection<S>) : S {
         val x = this.random.nextInt(edges.size)
         return edges.asSequence().drop(x).first()
-        //TODO do some magic here, for now just return the first value
-        //return edges.first()
     }
 
     private fun createCut(graph: Graph<T>, oneSet: Set<T>, preserveVertices: Boolean = false) : Graph<T> {
@@ -159,6 +168,10 @@ class TreeDecompositor<T>(private val graph: Graph<T>) {
                 .forEach { cut.putEdge(it.nodeU(), it.nodeV()) }
         return cut
     }
+
+
+    private fun lowDegree(vertices: Set<T>) = vertices.maxBy { graph.degree(it) }
+    private fun lowDegree(graph: Graph<T>, vertices: Set<T>) = vertices.maxBy { graph.degree(it) }
 
 }
 

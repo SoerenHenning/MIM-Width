@@ -10,9 +10,12 @@ object DimacsImporter {
 
     fun importGraph(dimacsGraph: String) : MutableGraph<Int> {
         val graphBuilder = GraphBuilder.undirected()
-
-
         return importGraph(StringReader(dimacsGraph), { n -> n} , graphBuilder)
+    }
+
+    fun importGraph(reader: Reader) : MutableGraph<Int> {
+        val graphBuilder = GraphBuilder.undirected()
+        return importGraph(reader, { n -> n} , graphBuilder)
     }
 
     fun <V> importGraph(reader: Reader, vertexBuilder: (Int) -> V, builder: GraphBuilder<Any?>): MutableGraph<V> {

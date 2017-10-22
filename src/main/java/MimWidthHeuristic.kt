@@ -39,14 +39,15 @@ fun main(args: Array<String>) {
 
 class TreeDecompositor<T>(
         private val graph: Graph<T>,
-        private val firstTieBreaker: (Collection<T>) -> Collection<T> = { s -> listOf(s.first()) },
-        private val secondTieBreaker: (Collection<T>) -> T = { s -> s.first() },
+        firstTieBreakerFactory: (Graph<T>) -> (Collection<T>) -> Iterable<T> = TieBreakers::createChooseMax,
+        secondTieBreakerFactory: (Graph<T>) -> (Collection<T>) -> T = TieBreakers2::createChooseMaxNeighboursDegree,
         private val iterations: Int = 100
 ) {
 
+    private val firstTieBreaker: (Collection<T>) -> Iterable<T> = firstTieBreakerFactory(graph) //TODO name
+    private val secondTieBreaker: (Collection<T>) -> T = secondTieBreakerFactory(graph) //TODO name
+
     private val random = Random()
-    //private val firstTieBreaker: (Collection<T>) -> T = { s -> s.first() }
-    //private val iterations = 100
 
     fun compute(): Graph<Set<T>> {
         val tree = GraphBuilder.undirected().build<Set<T>>()
@@ -168,10 +169,6 @@ class TreeDecompositor<T>(
                 .forEach { cut.putEdge(it.nodeU(), it.nodeV()) }
         return cut
     }
-
-
-    private fun lowDegree(vertices: Set<T>) = vertices.maxBy { graph.degree(it) }
-    private fun lowDegree(graph: Graph<T>, vertices: Set<T>) = vertices.maxBy { graph.degree(it) }
 
 }
 

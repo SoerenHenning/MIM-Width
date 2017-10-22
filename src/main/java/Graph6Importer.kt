@@ -41,16 +41,18 @@ object Graph6Importer {
 
             //check whether there's enough data
             val requiredBytes = Math.ceil(vertices.size * (vertices.size - 1) / 12.0).toInt() + byteIndex
-            if (bytes.size < requiredBytes)
+            if (bytes.size < requiredBytes) {
                 throw IllegalArgumentException("Graph string seems to be corrupt. Not enough data to read graph6 graph")
+            }
             //Read the lower triangle of the adjacency matrix of G
             for (i in 0 until vertices.size) {
                 for (j in 0 until i) {
-                    val bit = getBits(1)
-                    if (bit == 1) {
-                        val from = vertices[i]
-                        val to = vertices[j]
-                        graph.putEdge(from, to)
+                    if (getBits(1) == 1) {
+                        val source = vertices[i]
+                        val target = vertices[j]
+                        if (source != null && target != null) {
+                            graph.putEdge(source, target)
+                        }
                     }
                 }
             }

@@ -40,7 +40,7 @@ fun main(args: Array<String>) {
             for ((firstTieBreakerName, firstTieBreaker) in firstTieBreakers) {
                 for ((secondTieBreakerName, secondTieBreaker) in secondTieBreakers) {
                     val treeDecomposition = TreeDecompositor(graph, firstTieBreaker, secondTieBreaker, iteration).compute()
-                    println("$graphName,$iteration,$firstTieBreakerName,$secondTieBreakerName,${treeDecomposition.mimValue}")
+                    println("'$graphName','$iteration','$firstTieBreakerName','$secondTieBreakerName','${treeDecomposition.mimValue}'")
                 }
             }
         }

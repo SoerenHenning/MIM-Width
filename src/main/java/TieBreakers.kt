@@ -5,10 +5,10 @@ object TieBreakers {
     fun <T> createChooseFirst(graph: Graph<T>): (Collection<T>) -> Iterable<T>
             = { vertices -> listOf(vertices.first()) }
 
-    fun <T> createChooseMax(graph: Graph<T>): (Collection<T>) -> Iterable<T>
+    fun <T> createChooseMaxDegree(graph: Graph<T>): (Collection<T>) -> Iterable<T>
             = { vertices -> vertices.maxByAll { graph.degree(it) }}
 
-    fun <T> createChooseMin(graph: Graph<T>): (Collection<T>) -> Iterable<T>
+    fun <T> createChooseMinDegree(graph: Graph<T>): (Collection<T>) -> Iterable<T>
             = { vertices -> vertices.minByAll { graph.degree(it) }}
 
     // Implemented in a very functional style, no idea how this decreases the performance

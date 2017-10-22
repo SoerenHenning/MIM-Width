@@ -3,43 +3,9 @@ import com.google.common.graph.Graph
 import com.google.common.graph.GraphBuilder
 import java.util.*
 
-fun main(args: Array<String>) {
-    /*
-    val graph = GraphBuilder.undirected().build<Int>()
-    graph.putEdge(1, 2)
-    graph.putEdge(2, 3)
-    graph.putEdge(3, 4)
-    graph.putEdge(4, 5)
-    println(createCut(graph, setOf(1,2,3), preserveVertices = true))
-    println(computeMimHeuristic(graph))
-
-    val graph2 = GraphBuilder.undirected().build<Int>()
-    graph2.putEdge(1, 2)
-    graph2.putEdge(2, 3)
-    graph2.putEdge(3, 4)
-    graph2.putEdge(4, 5)
-    val decomposition = computeDecomposition(graph2)
-    println(decomposition)
-    */
-
-    val graph3 = GraphBuilder.undirected().build<Int>()
-    graph3.putEdge(1, 2)
-    graph3.putEdge(1, 4)
-    graph3.putEdge(2, 5)
-    graph3.putEdge(2, 3)
-    graph3.putEdge(3, 5)
-    graph3.putEdge(3, 4)
-    graph3.putEdge(3, 6)
-    graph3.putEdge(4, 5)
-    graph3.putEdge(5, 7)
-    val decomposition = TreeDecompositor(graph3).compute()
-    println(decomposition)
-
-}
-
 class TreeDecompositor<T>(
         private val graph: Graph<T>,
-        firstTieBreakerFactory: (Graph<T>) -> (Collection<T>) -> Iterable<T> = TieBreakers::createChooseMax,
+        firstTieBreakerFactory: (Graph<T>) -> (Collection<T>) -> Iterable<T> = TieBreakers::createChooseMaxDegree,
         secondTieBreakerFactory: (Graph<T>) -> (Collection<T>) -> T = TieBreakers2::createChooseMaxNeighboursDegree,
         private val iterations: Int = 100
 ) {
@@ -49,19 +15,21 @@ class TreeDecompositor<T>(
 
     private val random = Random()
 
-    fun compute(): Graph<Set<T>> {
+    fun compute(): TreeDecomposition<T> {
         val tree = GraphBuilder.undirected().build<Set<T>>()
         val allVertices = graph.nodes().toMutableSet()
 
         if (allVertices.isEmpty()) {
-            return tree
+            return TreeDecomposition(tree, Int.MAX_VALUE)
         }
 
         var treeParent = allVertices.toSet() // Create a read-only copy
         tree.addNode(treeParent)
+        var maxMim = Int.MIN_VALUE
 
         while(allVertices.size > 1) {
-            val vertex = chooseVertex(allVertices)
+            val (vertex, mim) = chooseVertex(allVertices)
+            maxMim = maxOf(mim, maxMim)
             allVertices.remove(vertex)
 
             // Add S and V/S as children
@@ -71,7 +39,7 @@ class TreeDecompositor<T>(
             treeParent = remainingVertices
         }
 
-        return tree
+        return TreeDecomposition(tree, maxMim)
     }
 
 
@@ -79,7 +47,7 @@ class TreeDecompositor<T>(
     // Choose S <= V' s.t. max{mim(S), mim(V'-S}} is small
     // Random choice of S if tie => multiple runs reasonable
     // However, currently no measure for quality of tre decomposition so no way to compare single runs
-    private fun chooseVertex(vertices: Set<T>): T {
+    private fun chooseVertex(vertices: Set<T>): Pair<T, Int> {
         if (vertices.isEmpty()) {
             throw IllegalArgumentException("Graph must have at least one vertex")
         }
@@ -99,14 +67,18 @@ class TreeDecompositor<T>(
                 smallestMimVertices.add(vertex)
             }
         }
-        return if (smallestMimVertices.size == 1) {
-            smallestMimVertices.first()
+        return Pair(breakTie(smallestMimVertices), smallestMim)
+    }
+
+    private fun breakTie(vertices: Collection<T>): T {
+        return if (vertices.size == 1) {
+            vertices.first()
         } else {
-            smallestMimVertices = firstTieBreaker(smallestMimVertices).toMutableSet()
-            if (smallestMimVertices.size == 1) {
-                smallestMimVertices.first()
+            val remainingVertices = firstTieBreaker(vertices).toMutableSet()
+            if (remainingVertices.size == 1) {
+                remainingVertices.first()
             } else {
-                secondTieBreaker(smallestMimVertices)
+                secondTieBreaker(remainingVertices)
             }
         }
     }

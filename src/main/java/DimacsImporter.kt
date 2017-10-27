@@ -85,11 +85,11 @@ object DimacsImporter {
     }
 
     private fun readNextLine(reader: BufferedReader): ReadLineResult {
-        var cols: Array<String> = emptyArray()
-        while (cols.isEmpty() || cols[0] == "c" || cols[0].startsWith("%")) {
-            cols = split(reader.readLine() ?: break)
+        var columns: Array<String> = emptyArray()
+        while (columns.isEmpty() || columns[0] == "c" || columns[0].startsWith("%") || columns[0].startsWith("X")) {
+            columns = split(reader.readLine() ?: break)
         }
-        return if (cols.isEmpty()) ReadLineResult.EndOfStream else ReadLineResult.Column(cols)
+        return if (columns.isEmpty()) ReadLineResult.EndOfStream else ReadLineResult.Column(columns)
     }
 
     private fun readNodeCount(reader: BufferedReader): Int {

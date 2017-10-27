@@ -27,7 +27,10 @@ class TreeDecompositor<T>(
         tree.addNode(treeParent)
         var maxMim = Int.MIN_VALUE
 
+        //val initialSize = allVertices.size //TODO
+
         while(allVertices.size > 1) {
+            //println("%.2f".format(((initialSize - allVertices.size.toDouble()) / initialSize) * 100) + "%") //TODO
             val (vertex, mim) = chooseVertex(allVertices)
             maxMim = maxOf(mim, maxMim)
             allVertices.remove(vertex)
@@ -85,10 +88,10 @@ class TreeDecompositor<T>(
 
     // Graph should be a cut
     private fun computeMimHeuristic(graph: Graph<T>) : Set<EndpointPair<T>> {
-        val remainingEdges = HashSet(graph.edges())
         var maximumInducedMatching = emptySet<EndpointPair<T>>()
         //TODO only run several times if random choice was needed
         for (i in 1..iterations) {
+            val remainingEdges = HashSet(graph.edges())
             val maximumInducedMatchingTemp = HashSet<EndpointPair<T>>()
             while (remainingEdges.isNotEmpty()) {
                 val edgesWithLowestDegrees = ArrayList<EndpointPair<T>>()
@@ -104,8 +107,8 @@ class TreeDecompositor<T>(
                     }
                 }
                 val selectedEdge = if (edgesWithLowestDegrees.size == 1) remainingEdges.first() else breakTieRandomly(edgesWithLowestDegrees)
-                remainingEdges.remove(selectedEdge)
 
+                remainingEdges.remove(selectedEdge)
                 for (node in selectedEdge) {
                     for (adjacentNode in graph.adjacentNodes(node)) {
                         val edge1 = EndpointPair.unordered(node, adjacentNode)
@@ -116,6 +119,7 @@ class TreeDecompositor<T>(
                         }
                     }
                 }
+
                 maximumInducedMatchingTemp.add(selectedEdge)
             }
             if (maximumInducedMatchingTemp.size > maximumInducedMatching.size) {

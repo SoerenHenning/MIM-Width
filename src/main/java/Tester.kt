@@ -62,6 +62,7 @@ fun main(args: Array<String>) {
     printWriter.println("Start time: " + LocalDateTime.now())
 
     printWriter.println("'Graph','Vertices','Edges','Edge Density','Iterations','First Tie Breaker','Second Tie Breaker','MIM'")
+    printWriter.flush()
     for ((graphName, graph) in graphs) {
         val numberOfVertices = graph.nodes().size
         val numberOfEdges = graph.edges().size
@@ -71,6 +72,7 @@ fun main(args: Array<String>) {
                 for ((secondTieBreakerName, secondTieBreaker) in secondTieBreakers) {
                     val treeDecomposition = TreeDecompositor(graph, firstTieBreaker, secondTieBreaker, iteration).compute()
                     printWriter.println("'$graphName','$numberOfVertices','$numberOfEdges','$edgeDensity','$iteration','$firstTieBreakerName','$secondTieBreakerName','${treeDecomposition.mimValue}'")
+                    printWriter.flush()
                 }
             }
         }

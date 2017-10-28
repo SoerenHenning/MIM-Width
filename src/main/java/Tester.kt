@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     // Different first tie-breaking algorithm
     // Different second tie-breaking algorithm
 
-    val directory = "example-graphs"
+    val directory = "example-graphs-2"
 
     val dimacsGraphFiles = listOf(
             //"1awd.dgf"
@@ -26,7 +26,7 @@ fun main(args: Array<String>) {
             //"fpsol2.i.1.dgf",
             //"inithx.i.1.dgf"
             //"le450_25c.dgf"
-            "miles1500.dgf",
+            //"miles1500.dgf",
             "myciel7.dgf",
             "queen16_16.dgf",
             "zeroin.i.3.dgf"

@@ -14,35 +14,35 @@ fun main(args: Array<String>) {
     val directory = "example-graphs"
 
     val dimacsGraphFiles = listOf(
-            "1awd.dgf",
-            "BN_28.dgf",
-            "miles1500.dgf",
-            "mulsol.i.5.dgf",
-            "queen8_12.col",
-            "zeroin.i.1.col"
+            //"1awd.dgf",
+            //"BN_28.dgf",
+            //"miles1500.dgf",
+            //"mulsol.i.5.dgf",
+            //"queen8_12.col",
+            //"zeroin.i.1.col"
             //-------
             //"BN_23.dgf",
             //"DSJR500.1c.dgf",
             //"fpsol2.i.1.dgf",
             //"inithx.i.1.dgf"
-            //"le450_25c.dgf"
+            "le450_25c.dgf",
             //"miles1500.dgf",
-            //"myciel7.dgf",
-            //"queen16_16.dgf",
-            //"zeroin.i.3.dgf"
+            "myciel7.dgf",
+            "queen16_16.dgf",
+            "zeroin.i.3.dgf"
 
     )
     val corruptedDimacsGraphFiles = listOf(
-            "eil51.tsp.dgf",
-            "celar06-wpp.dgf"
-            //"school1-pp.dgf"
+            //"eil51.tsp.dgf",
+            //"celar06-wpp.dgf"
+            "school1-pp.dgf"
     )
 
     val dimacsGraphs = dimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"))) }
     val corruptedDimacsGraphs = corruptedDimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"),nodeIds = true)) }
     val graphs = dimacsGraphs + corruptedDimacsGraphs
     //val graphs = dimacsGraphs
-    //val graphs = mapOf("F}lzw" to Graph6Importer.importGraph("F}lzw"))
+    //val graphs = mapOf("I?beczMUw" to Graph6Importer.importGraph("I?beczMUw"))
     //val iterations = listOf(10, 50, 100)
     val iterations = listOf(10)
     val firstTieBreakers = mapOf<String, (Graph<Int>) -> (Collection<Int>) -> Iterable<Int>>(
@@ -51,15 +51,15 @@ fun main(args: Array<String>) {
             "Min Degree" to TieBreakers::createChooseMinDegree
     )
     val secondTieBreakers = mapOf<String, (Graph<Int>) -> (Collection<Int>) -> Int>(
-            "First" to TieBreakers2::createChooseFirst,
-            "Max Neighbours Degree" to TieBreakers2::createChooseMaxNeighboursDegree,
-            "Min Neighbours Degree" to TieBreakers2::createChooseMinNeighboursDegree,
-            "Max Edges between Neighbours" to TieBreakers2::createChooseMaxNeighboursEdges,
-            "Min Edges between Neighbours" to TieBreakers2::createChooseMinNeighboursEdges
+            "First" to TieBreakers2::createChooseFirst //,
+            //"Max Neighbours Degree" to TieBreakers2::createChooseMaxNeighboursDegree,
+            //"Min Neighbours Degree" to TieBreakers2::createChooseMinNeighboursDegree,
+            //"Max Edges between Neighbours" to TieBreakers2::createChooseMaxNeighboursEdges,
+            //"Min Edges between Neighbours" to TieBreakers2::createChooseMinNeighboursEdges
     )
 
-    //val printWriter = File("result_" + LocalDateTime.now().toString().replace(':', '.') + ".txt").apply { createNewFile() }.printWriter()
-    val printWriter = System.out
+    val printWriter = File("result_" + LocalDateTime.now().toString().replace(':', '.') + ".txt").apply { createNewFile() }.printWriter()
+    //val printWriter = System.out
 
     printWriter.println("Start time: " + LocalDateTime.now())
 

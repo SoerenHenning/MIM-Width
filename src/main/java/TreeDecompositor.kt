@@ -14,7 +14,7 @@ class TreeDecompositor<T>(
     private val firstTieBreaker: (Collection<T>) -> Iterable<T> = firstTieBreakerFactory(graph) //TODO name
     private val secondTieBreaker: (Collection<T>) -> T = secondTieBreakerFactory(graph) //TODO name
 
-    private val random = Random()
+    private val random = Random(42)
 
     fun compute(): TreeDecomposition<T> {
         val tree = GraphBuilder.undirected().build<Set<T>>()
@@ -69,6 +69,7 @@ class TreeDecompositor<T>(
                 smallestMimVertices.add(vertex)
             }
         }
+        //val subgraph = Graphs.inducedSubgraph(graph, vertices)
         return Pair(breakTie(smallestMimVertices), smallestMim)
     }
 

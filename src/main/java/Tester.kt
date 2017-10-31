@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     // Different first tie-breaking algorithm
     // Different second tie-breaking algorithm
 
-    val directory = "example-graphs-2"
+    val directory = "example-graphs-3"
 
     val dimacsGraphFiles = listOf(
             //"1awd.dgf",
@@ -25,11 +25,20 @@ fun main(args: Array<String>) {
             //"DSJR500.1c.dgf",
             //"fpsol2.i.1.dgf",
             //"inithx.i.1.dgf"
-            "le450_25c.dgf",
+            //"le450_25c.dgf",
             //"miles1500.dgf",
-            "myciel7.dgf",
-            "queen16_16.dgf",
-            "zeroin.i.3.dgf"
+            //"myciel7.dgf",
+            //"queen16_16.dgf",
+            //"zeroin.i.3.dgf"
+            //--------
+            "1bkf.dgf",
+            "1fjl.dgf",
+            "barley.dgf",
+            "david.dgf",
+            "huck.dgf",
+            "sodoku.dgf",
+            "water.dgf",
+            "weeduk.dgf"
 
     )
     val corruptedDimacsGraphFiles = listOf(
@@ -40,8 +49,8 @@ fun main(args: Array<String>) {
 
     val dimacsGraphs = dimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"))) }
     val corruptedDimacsGraphs = corruptedDimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"),nodeIds = true)) }
-    val graphs = dimacsGraphs + corruptedDimacsGraphs
-    //val graphs = dimacsGraphs
+    //val graphs = dimacsGraphs + corruptedDimacsGraphs
+    val graphs = dimacsGraphs
     //val graphs = mapOf("I?beczMUw" to Graph6Importer.importGraph("I?beczMUw"))
     //val iterations = listOf(10, 50, 100)
     val iterations = listOf(10)
@@ -81,6 +90,7 @@ fun main(args: Array<String>) {
     }
 
     printWriter.println("End time: " + LocalDateTime.now())
+    printWriter.close()
 }
 
 fun getClasspathFileReader(file: String) = BufferedReader(InputStreamReader(DimacsImporter::class.java.getResourceAsStream(file)))

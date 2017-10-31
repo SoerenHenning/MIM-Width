@@ -2,6 +2,14 @@ import com.google.common.graph.Graph
 
 object TieBreakers {
 
+    fun <T> chooseFirst(graph: Graph<T>, vertices: Collection<T>): Iterable<T>
+            = listOf(vertices.first())
+    fun <T> chooseMaxDegree(graph: Graph<T>, vertices: Collection<T>): Iterable<T>
+            = vertices.maxByAll { graph.degree(it) }
+
+    fun <T> chooseMinDegree(graph: Graph<T>, vertices: Collection<T>): Iterable<T>
+            = vertices.minByAll { graph.degree(it) }
+
     fun <T> createChooseFirst(graph: Graph<T>): (Collection<T>) -> Iterable<T>
             = { vertices -> listOf(vertices.first()) }
 
@@ -10,6 +18,7 @@ object TieBreakers {
 
     fun <T> createChooseMinDegree(graph: Graph<T>): (Collection<T>) -> Iterable<T>
             = { vertices -> vertices.minByAll { graph.degree(it) }}
+
 
     // Implemented in a very functional style, no idea how this decreases the performance
     private inline fun <T, R : Comparable<R>> Iterable<T>.maxByAll(selector: (T) -> R): Iterable<T> =
@@ -32,6 +41,20 @@ object TieBreakers {
 }
 
 object TieBreakers2 {
+
+    fun <T> chooseFirst(graph: Graph<T>, vertices: Collection<T>): T = vertices.first()
+
+    fun <T> chooseMaxNeighboursDegree(graph: Graph<T>, vertices: Collection<T>):  T
+            = vertices.maxBy { graph.getNeighboursDegree(it) } ?: throw IllegalArgumentException("Collection of vertices must not be empty")
+
+    fun <T> chooseMinNeighboursDegree(graph: Graph<T>, vertices: Collection<T>): T
+            = vertices.minBy { graph.getNeighboursDegree(it) } ?: throw IllegalArgumentException("Collection of vertices must not be empty")
+
+    fun <T> chooseMaxNeighboursEdges(graph: Graph<T>, vertices: Collection<T>): T
+            = vertices.maxBy { graph.getNeighboursEdgesCount(it) } ?: throw IllegalArgumentException("Collection of vertices must not be empty")
+
+    fun <T> chooseMinNeighboursEdges(graph: Graph<T>, vertices: Collection<T>): T
+            = vertices.minBy { graph.getNeighboursEdgesCount(it) } ?: throw IllegalArgumentException("Collection of vertices must not be empty")
 
     fun <T> createChooseFirst(graph: Graph<T>): (Collection<T>) -> T = { vertices -> vertices.first() }
 

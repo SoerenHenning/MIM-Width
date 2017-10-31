@@ -6,15 +6,12 @@ import java.util.*
 
 class TreeDecompositor<T>(
         private val graph: Graph<T>,
-        firstTieBreakerFactory: (Graph<T>) -> (Collection<T>) -> Iterable<T> = TieBreakers::createChooseMaxDegree,
-        secondTieBreakerFactory: (Graph<T>) -> (Collection<T>) -> T = TieBreakers2::createChooseMaxNeighboursDegree,
-        private val iterations: Int = 100
+        private val firstTieBreaker: (Graph<T>, Collection<T>) -> Iterable<T> = TieBreakers::chooseMaxDegree,
+        private val secondTieBreaker: (Graph<T>, Collection<T>) -> T = TieBreakers2::chooseMaxNeighboursDegree,
+        private val iterations: Int = 100 //TODO
 ) {
 
-    private val firstTieBreaker: (Collection<T>) -> Iterable<T> = firstTieBreakerFactory(graph) //TODO name
-    private val secondTieBreaker: (Collection<T>) -> T = secondTieBreakerFactory(graph) //TODO name
-
-    private val random = Random(42)
+    private val random = Random(42) //TODO
 
     fun compute(): TreeDecomposition<T> {
         val tree = GraphBuilder.undirected().build<Set<T>>()
@@ -69,19 +66,19 @@ class TreeDecompositor<T>(
                 smallestMimVertices.add(vertex)
             }
         }
-        //val subgraph = Graphs.inducedSubgraph(graph, vertices)
-        return Pair(breakTie(smallestMimVertices), smallestMim)
+        val subgraph = Graphs.inducedSubgraph(graph, vertices)
+        return Pair(breakTie(subgraph, smallestMimVertices), smallestMim)
     }
 
-    private fun breakTie(vertices: Collection<T>): T {
+    private fun breakTie(graph: Graph<T>, vertices: Collection<T>): T {
         return if (vertices.size == 1) {
             vertices.first()
         } else {
-            val remainingVertices = firstTieBreaker(vertices).toSet()
+            val remainingVertices = firstTieBreaker(graph, vertices).toSet()
             if (remainingVertices.size == 1) {
                 remainingVertices.first()
             } else {
-                secondTieBreaker(remainingVertices)
+                secondTieBreaker(graph, remainingVertices)
             }
         }
     }

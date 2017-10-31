@@ -11,15 +11,15 @@ fun main(args: Array<String>) {
     // Different first tie-breaking algorithm
     // Different second tie-breaking algorithm
 
-    val directory = "example-graphs-3"
+    val directory = "example-graphs"
 
     val dimacsGraphFiles = listOf(
-            //"1awd.dgf",
-            //"BN_28.dgf",
-            //"miles1500.dgf",
-            //"mulsol.i.5.dgf",
-            //"queen8_12.col",
-            //"zeroin.i.1.col"
+            "1awd.dgf",
+            "BN_28.dgf",
+            "miles1500.dgf",
+            "mulsol.i.5.dgf",
+            "queen8_12.col",
+            "zeroin.i.1.col"
             //-------
             //"BN_23.dgf",
             //"DSJR500.1c.dgf",
@@ -31,44 +31,44 @@ fun main(args: Array<String>) {
             //"queen16_16.dgf",
             //"zeroin.i.3.dgf"
             //--------
-            "1bkf.dgf",
-            "1fjl.dgf",
-            "barley.dgf",
-            "david.dgf",
-            "huck.dgf",
-            "sodoku.dgf",
-            "water.dgf",
-            "weeduk.dgf"
+            //"1bkf.dgf",
+            //"1fjl.dgf",
+            //"barley.dgf",
+            //"david.dgf",
+            //"huck.dgf",
+            //"sodoku.dgf",
+            //"water.dgf",
+            //"weeduk.dgf"
 
     )
     val corruptedDimacsGraphFiles = listOf(
-            //"eil51.tsp.dgf",
-            //"celar06-wpp.dgf"
-            "school1-pp.dgf"
+            "eil51.tsp.dgf",
+            "celar06-wpp.dgf"
+            //"school1-pp.dgf"
     )
 
     val dimacsGraphs = dimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"))) }
     val corruptedDimacsGraphs = corruptedDimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"),nodeIds = true)) }
     //val graphs = dimacsGraphs + corruptedDimacsGraphs
     val graphs = dimacsGraphs
-    //val graphs = mapOf("I?beczMUw" to Graph6Importer.importGraph("I?beczMUw"))
+    //val graphs = mapOf("F}lzw" to Graph6Importer.importGraph("F}lzw"))
     //val iterations = listOf(10, 50, 100)
     val iterations = listOf(10)
-    val firstTieBreakers = mapOf<String, (Graph<Int>) -> (Collection<Int>) -> Iterable<Int>>(
-            //"First" to TieBreakers::createChooseFirst,
-            "Max Degree" to TieBreakers::createChooseMaxDegree,
-            "Min Degree" to TieBreakers::createChooseMinDegree
+    val firstTieBreakers = mapOf<String, (Graph<Int>, Collection<Int>) -> Iterable<Int>>(
+            "First" to TieBreakers::chooseFirst,
+            "Max Degree" to TieBreakers::chooseMaxDegree,
+            "Min Degree" to TieBreakers::chooseMinDegree
     )
-    val secondTieBreakers = mapOf<String, (Graph<Int>) -> (Collection<Int>) -> Int>(
-            "First" to TieBreakers2::createChooseFirst //,
-            //"Max Neighbours Degree" to TieBreakers2::createChooseMaxNeighboursDegree,
-            //"Min Neighbours Degree" to TieBreakers2::createChooseMinNeighboursDegree,
-            //"Max Edges between Neighbours" to TieBreakers2::createChooseMaxNeighboursEdges,
-            //"Min Edges between Neighbours" to TieBreakers2::createChooseMinNeighboursEdges
+    val secondTieBreakers = mapOf<String, (Graph<Int>, Collection<Int>) -> Int>(
+            "First" to TieBreakers2::chooseFirst,
+            "Max Neighbours Degree" to TieBreakers2::chooseMaxNeighboursDegree,
+            "Min Neighbours Degree" to TieBreakers2::chooseMinNeighboursDegree,
+            "Max Edges between Neighbours" to TieBreakers2::chooseMaxNeighboursEdges,
+            "Min Edges between Neighbours" to TieBreakers2::chooseMinNeighboursEdges
     )
 
-    val printWriter = File("result_" + LocalDateTime.now().toString().replace(':', '.') + ".txt").apply { createNewFile() }.printWriter()
-    //val printWriter = System.out
+    //val printWriter = File("result_" + LocalDateTime.now().toString().replace(':', '.') + ".txt").apply { createNewFile() }.printWriter()
+    val printWriter = System.out
 
     printWriter.println("Start time: " + LocalDateTime.now())
 

@@ -8,39 +8,37 @@ class TreeDecompositor<T>(
         private val graph: Graph<T>,
         private val firstTieBreaker: (Graph<T>, Collection<T>) -> Iterable<T> = TieBreakers::chooseMaxDegree,
         private val secondTieBreaker: (Graph<T>, Collection<T>) -> T = TieBreakers2::chooseMaxNeighboursDegree,
-        private val iterations: Int = 100 //TODO
+        private val iterations: Int = 100, //TODO
+        private val random: Random = Random()
 ) {
-
-    private val random = Random(42) //TODO
 
     fun compute(): TreeDecomposition<T> {
         val tree = GraphBuilder.undirected().build<Set<T>>()
+        val cutMimValues = hashMapOf<Set<T>, Int>()
         val allVertices = graph.nodes().toMutableSet()
 
         if (allVertices.isEmpty()) {
-            return TreeDecomposition(tree, Int.MAX_VALUE)
+            return TreeDecomposition(tree, emptyMap())
         }
 
         var treeParent = allVertices.toSet() // Create a read-only copy
         tree.addNode(treeParent)
-        var maxMim = Int.MIN_VALUE
-
-        //val initialSize = allVertices.size //TODO
 
         while(allVertices.size > 1) {
-            //println("%.2f".format(((initialSize - allVertices.size.toDouble()) / initialSize) * 100) + "%") //TODO
             val (vertex, mim) = chooseVertex(allVertices)
-            maxMim = maxOf(mim, maxMim)
             allVertices.remove(vertex)
+            val remainingVertices = allVertices.toSet() // Create a read-only copy
 
             // Add S and V/S as children
             tree.putEdge(treeParent, setOf(vertex))
-            val remainingVertices = allVertices.toSet() // Create a read-only copy
+            cutMimValues.put(setOf(vertex), if (graph.degree(vertex) == 0) 0 else 1)
             tree.putEdge(treeParent, remainingVertices)
+            cutMimValues.put(remainingVertices, mim)
+
             treeParent = remainingVertices
         }
 
-        return TreeDecomposition(tree, maxMim)
+        return TreeDecomposition(tree, cutMimValues)
     }
 
 

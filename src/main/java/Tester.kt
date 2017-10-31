@@ -49,11 +49,11 @@ fun main(args: Array<String>) {
 
     val dimacsGraphs = dimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"))) }
     val corruptedDimacsGraphs = corruptedDimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"),nodeIds = true)) }
-    //val graphs = dimacsGraphs + corruptedDimacsGraphs
-    val graphs = dimacsGraphs
+    val graphs = dimacsGraphs + corruptedDimacsGraphs
+    //val graphs = dimacsGraphs
     //val graphs = mapOf("F}lzw" to Graph6Importer.importGraph("F}lzw"))
     //val iterations = listOf(10, 50, 100)
-    val iterations = listOf(10)
+    val iterations = listOf(10, 50, 100)
     val firstTieBreakers = mapOf<String, (Graph<Int>, Collection<Int>) -> Iterable<Int>>(
             "First" to TieBreakers::chooseFirst,
             "Max Degree" to TieBreakers::chooseMaxDegree,

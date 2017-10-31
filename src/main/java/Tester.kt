@@ -67,8 +67,8 @@ fun main(args: Array<String>) {
             "Min Edges between Neighbours" to TieBreakers2::chooseMinNeighboursEdges
     )
 
-    //val printWriter = File("result_" + LocalDateTime.now().toString().replace(':', '.') + ".txt").apply { createNewFile() }.printWriter()
-    val printWriter = System.out
+    val printWriter = File("result_" + LocalDateTime.now().toString().replace(':', '.') + ".txt").apply { createNewFile() }.printWriter()
+    //val printWriter = System.out
 
     printWriter.println("Start time: " + LocalDateTime.now())
 

@@ -1,6 +1,4 @@
 import com.google.common.graph.Graph
-import java.io.BufferedReader
-import java.io.InputStreamReader
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -50,20 +48,20 @@ fun main(args: Array<String>) {
     val firstTieBreaker: (Graph<Int>, Collection<Int>) -> Iterable<Int> = ReducingTieBreakers::chooseMinDegree
     val secondTieBreaker: (Graph<Int>, Collection<Int>) -> Int  = FinalTieBreakers::chooseMaxNeighboursEdges
 
+    println("'Graph','Vertices','Edges','Edge Density','Heuristic','Exact'")
+
     for ((graphName, graph) in graphs) {
+        val numberOfVertices = graph.nodes().size
+        val numberOfEdges = graph.edges().size
+        val edgeDensity = (2 * numberOfEdges.toDouble()) / (numberOfVertices * (numberOfVertices - 1))
         val treeDecomposition = TreeDecompositor(graph, firstTieBreaker, secondTieBreaker, iterations, Random(42)).compute()
         val approximatedMim = treeDecomposition.mimValue
-        if (approximatedMim <= 2) {
-            val exactMim = ExactMimCalculator(graph, treeDecomposition).compute().mimValue
-            if (exactMim <= 2) {
-                println("[ALERT] $graphName     Upper Bound for MIM Width: $exactMim")
-                println("'$graphName','$approximatedMim','$exactMim'")
-            } else {
-                println("'$graphName','$approximatedMim',''")
-            }
+        val exactMim = if (approximatedMim <= 2) {
+            ExactMimCalculator(graph, treeDecomposition).compute().mimValue
         } else {
-            println("'$graphName','$approximatedMim',''")
+            Int.MAX_VALUE
         }
+        println("'$graphName','$numberOfVertices','$numberOfEdges','$edgeDensity','$approximatedMim','${if (exactMim <= 2) exactMim.toString() else ""}'")
     }
 
 }

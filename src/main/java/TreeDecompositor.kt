@@ -1,52 +1,49 @@
 import com.google.common.graph.EndpointPair
 import com.google.common.graph.Graph
 import com.google.common.graph.GraphBuilder
+import com.google.common.graph.Graphs
 import java.util.*
 
 class TreeDecompositor<T>(
         private val graph: Graph<T>,
-        firstTieBreakerFactory: (Graph<T>) -> (Collection<T>) -> Iterable<T> = TieBreakers::createChooseMaxDegree,
-        secondTieBreakerFactory: (Graph<T>) -> (Collection<T>) -> T = TieBreakers2::createChooseMaxNeighboursDegree,
-        private val iterations: Int = 100
+        private val firstTieBreaker: (Graph<T>, Collection<T>) -> Iterable<T> = ReducingTieBreakers::chooseMaxDegree,
+        private val secondTieBreaker: (Graph<T>, Collection<T>) -> T = FinalTieBreakers::chooseMaxNeighboursDegree,
+        private val iterations: Int = 100, //TODO
+        private val random: Random = Random()
 ) {
-
-    private val firstTieBreaker: (Collection<T>) -> Iterable<T> = firstTieBreakerFactory(graph) //TODO name
-    private val secondTieBreaker: (Collection<T>) -> T = secondTieBreakerFactory(graph) //TODO name
-
-    private val random = Random()
 
     fun compute(): TreeDecomposition<T> {
         val tree = GraphBuilder.undirected().build<Set<T>>()
+        val cutMimValues = hashMapOf<Set<T>, Int>()
         val allVertices = graph.nodes().toMutableSet()
 
         if (allVertices.isEmpty()) {
-            return TreeDecomposition(tree, Int.MAX_VALUE)
+            return TreeDecomposition(tree, emptyMap())
         }
 
         var treeParent = allVertices.toSet() // Create a read-only copy
         tree.addNode(treeParent)
-        var maxMim = Int.MIN_VALUE
 
         while(allVertices.size > 1) {
             val (vertex, mim) = chooseVertex(allVertices)
-            maxMim = maxOf(mim, maxMim)
             allVertices.remove(vertex)
+            val remainingVertices = allVertices.toSet() // Create a read-only copy
 
             // Add S and V/S as children
             tree.putEdge(treeParent, setOf(vertex))
-            val remainingVertices = allVertices.toSet() // Create a read-only copy
+            cutMimValues.put(setOf(vertex), if (graph.degree(vertex) == 0) 0 else 1)
             tree.putEdge(treeParent, remainingVertices)
+            cutMimValues.put(remainingVertices, mim)
+
             treeParent = remainingVertices
         }
 
-        return TreeDecomposition(tree, maxMim)
+        return TreeDecomposition(tree, cutMimValues)
     }
 
 
     // Given Graph G=(V,E) and V' <= V
-    // Choose S <= V' s.t. max{mim(S), mim(V'-S}} is small
-    // Random choice of S if tie => multiple runs reasonable
-    // However, currently no measure for quality of tre decomposition so no way to compare single runs
+    // Choose S in V' s.t. max{mim(S), mim(V'-S}} is small
     private fun chooseVertex(vertices: Set<T>): Pair<T, Int> {
         if (vertices.isEmpty()) {
             throw IllegalArgumentException("Graph must have at least one vertex")
@@ -67,34 +64,34 @@ class TreeDecompositor<T>(
                 smallestMimVertices.add(vertex)
             }
         }
-        return Pair(breakTie(smallestMimVertices), smallestMim)
+        val subgraph = Graphs.inducedSubgraph(graph, vertices)
+        return Pair(breakTie(subgraph, smallestMimVertices), smallestMim)
     }
 
-    private fun breakTie(vertices: Collection<T>): T {
+    private fun breakTie(graph: Graph<T>, vertices: Collection<T>): T {
         return if (vertices.size == 1) {
             vertices.first()
         } else {
-            val remainingVertices = firstTieBreaker(vertices).toMutableSet()
+            val remainingVertices = firstTieBreaker(graph, vertices).toSet()
             if (remainingVertices.size == 1) {
                 remainingVertices.first()
             } else {
-                secondTieBreaker(remainingVertices)
+                secondTieBreaker(graph, remainingVertices)
             }
         }
     }
 
     // Graph should be a cut
     private fun computeMimHeuristic(graph: Graph<T>) : Set<EndpointPair<T>> {
-        val remainingEdges = HashSet(graph.edges())
         var maximumInducedMatching = emptySet<EndpointPair<T>>()
-        //TODO only run several times if random choice was needed
         for (i in 1..iterations) {
+            val remainingGraph = Graphs.copyOf(graph)
             val maximumInducedMatchingTemp = HashSet<EndpointPair<T>>()
-            while (remainingEdges.isNotEmpty()) {
+            while (remainingGraph.edges().isNotEmpty()) {
                 val edgesWithLowestDegrees = ArrayList<EndpointPair<T>>()
                 var lowestDegree = Int.MAX_VALUE
-                for (edge in remainingEdges) {
-                    val degree = edge.asSequence().map { x -> graph.degree(x) }.sum()
+                for (edge in remainingGraph.edges()) {
+                    val degree = edge.asSequence().map { x -> remainingGraph.degree(x) }.sum()
                     if (degree < lowestDegree) {
                         lowestDegree = degree
                         edgesWithLowestDegrees.clear()
@@ -103,19 +100,22 @@ class TreeDecompositor<T>(
                         edgesWithLowestDegrees.add(edge)
                     }
                 }
-                val selectedEdge = if (edgesWithLowestDegrees.size == 1) remainingEdges.first() else breakTieRandomly(edgesWithLowestDegrees)
-                remainingEdges.remove(selectedEdge)
+                val selectedEdge = if (edgesWithLowestDegrees.size == 1) {
+                    edgesWithLowestDegrees.first()
+                } else {
+                    breakTieRandomly(edgesWithLowestDegrees)
+                }
 
+                remainingGraph.removeEdge(selectedEdge.nodeU(), selectedEdge.nodeV())
                 for (node in selectedEdge) {
-                    for (adjacentNode in graph.adjacentNodes(node)) {
-                        val edge1 = EndpointPair.unordered(node, adjacentNode)
-                        remainingEdges.remove(edge1)
-                        for (adjacentNode2 in graph.adjacentNodes(adjacentNode)) {
-                            val edge2 = EndpointPair.unordered(adjacentNode, adjacentNode2)
-                            remainingEdges.remove(edge2)
+                    for (adjacentNode in remainingGraph.adjacentNodes(node).toList()) {
+                        remainingGraph.removeEdge(node, adjacentNode)
+                        for (adjacentNode2 in remainingGraph.adjacentNodes(adjacentNode).toList()) {
+                            remainingGraph.removeEdge(adjacentNode, adjacentNode2)
                         }
                     }
                 }
+
                 maximumInducedMatchingTemp.add(selectedEdge)
             }
             if (maximumInducedMatchingTemp.size > maximumInducedMatching.size) {

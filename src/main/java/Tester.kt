@@ -1,8 +1,8 @@
 import com.google.common.graph.Graph
 import java.io.InputStreamReader
 import java.io.BufferedReader
-import java.io.File
 import java.time.LocalDateTime
+import java.util.*
 
 fun main(args: Array<String>) {
 
@@ -55,16 +55,16 @@ fun main(args: Array<String>) {
     //val iterations = listOf(10, 50, 100)
     val iterations = listOf(10, 50, 100)
     val firstTieBreakers = mapOf<String, (Graph<Int>, Collection<Int>) -> Iterable<Int>>(
-            "First" to TieBreakers::chooseFirst,
-            "Max Degree" to TieBreakers::chooseMaxDegree,
-            "Min Degree" to TieBreakers::chooseMinDegree
+            //"First" to ReducingTieBreakers::chooseFirst,
+            "Max Degree" to ReducingTieBreakers::chooseMaxDegree
+            //"Min Degree" to ReducingTieBreakers::chooseMinDegree
     )
     val secondTieBreakers = mapOf<String, (Graph<Int>, Collection<Int>) -> Int>(
-            "First" to TieBreakers2::chooseFirst,
-            "Max Neighbours Degree" to TieBreakers2::chooseMaxNeighboursDegree,
-            "Min Neighbours Degree" to TieBreakers2::chooseMinNeighboursDegree,
-            "Max Edges between Neighbours" to TieBreakers2::chooseMaxNeighboursEdges,
-            "Min Edges between Neighbours" to TieBreakers2::chooseMinNeighboursEdges
+            "First" to FinalTieBreakers::chooseFirst
+            //"Max Neighbours Degree" to FinalTieBreakers::chooseMaxNeighboursDegree,
+            //"Min Neighbours Degree" to FinalTieBreakers::chooseMinNeighboursDegree,
+            //"Max Edges between Neighbours" to FinalTieBreakers::chooseMaxNeighboursEdges,
+            //"Min Edges between Neighbours" to FinalTieBreakers::chooseMinNeighboursEdges
     )
 
     val printWriter = File("result_" + LocalDateTime.now().toString().replace(':', '.') + ".txt").apply { createNewFile() }.printWriter()
@@ -81,7 +81,7 @@ fun main(args: Array<String>) {
         for (iteration in iterations) {
             for ((firstTieBreakerName, firstTieBreaker) in firstTieBreakers) {
                 for ((secondTieBreakerName, secondTieBreaker) in secondTieBreakers) {
-                    val treeDecomposition = TreeDecompositor(graph, firstTieBreaker, secondTieBreaker, iteration).compute()
+                    val treeDecomposition = TreeDecompositor(graph, firstTieBreaker, secondTieBreaker, iteration, Random(42)).compute()
                     printWriter.println("'$graphName','$numberOfVertices','$numberOfEdges','$edgeDensity','$iteration','$firstTieBreakerName','$secondTieBreakerName','${treeDecomposition.mimValue}'")
                     printWriter.flush()
                 }

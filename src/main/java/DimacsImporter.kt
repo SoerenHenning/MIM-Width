@@ -86,7 +86,7 @@ object DimacsImporter {
 
     private fun readNextLine(reader: BufferedReader): ReadLineResult {
         var columns: Array<String> = emptyArray()
-        while (columns.isEmpty() || columns[0] == "c" || columns[0].startsWith("%") || columns[0].startsWith("X")) {
+        while (columns.isEmpty() || columns[0] == "c" || columns[0].startsWith("%") || columns[0].startsWith("x") || columns[0].startsWith("X")) {
             columns = split(reader.readLine() ?: break)
         }
         return if (columns.isEmpty()) ReadLineResult.EndOfStream else ReadLineResult.Column(columns)

@@ -5,7 +5,7 @@ import java.time.Instant
 
 class ExactMimCalculator<T>(private val graph: Graph<T>, private val treeDecomposition: TreeDecomposition<T>) {
 
-    private fun compute(): TreeDecomposition<T> {
+    fun compute(): TreeDecomposition<T> {
         val tree = treeDecomposition.tree
         val cutMimValues = HashMap<Set<T>, Int>(treeDecomposition.cutMimValues.size)
         for(edge in tree.edges()) {

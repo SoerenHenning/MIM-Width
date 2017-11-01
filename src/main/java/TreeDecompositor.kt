@@ -6,8 +6,8 @@ import java.util.*
 
 class TreeDecompositor<T>(
         private val graph: Graph<T>,
-        private val firstTieBreaker: (Graph<T>, Collection<T>) -> Iterable<T> = TieBreakers::chooseMaxDegree,
-        private val secondTieBreaker: (Graph<T>, Collection<T>) -> T = TieBreakers2::chooseMaxNeighboursDegree,
+        private val firstTieBreaker: (Graph<T>, Collection<T>) -> Iterable<T> = ReducingTieBreakers::chooseMaxDegree,
+        private val secondTieBreaker: (Graph<T>, Collection<T>) -> T = FinalTieBreakers::chooseMaxNeighboursDegree,
         private val iterations: Int = 100, //TODO
         private val random: Random = Random()
 ) {

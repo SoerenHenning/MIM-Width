@@ -12,7 +12,7 @@
         <kotlin.version>1.1.51</kotlin.version>
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
-        <main.class>Tester3Kt</main.class>
+        <main.class>TesterKt</main.class>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

@@ -54,18 +54,18 @@ fun main(args: Array<String>) {
     //val graphs = dimacsGraphs
     //val graphs = mapOf("F}lzw" to Graph6Importer.importGraph("F}lzw"))
     //val iterations = listOf(10, 50, 100)
-    val iterations = listOf(10, 50, 100)
+    val iterations = listOf(5, 20, 30, 40)
     val firstTieBreakers = mapOf<String, (Graph<Int>, Collection<Int>) -> Iterable<Int>>(
-            //"First" to ReducingTieBreakers::chooseFirst,
-            "Max Degree" to ReducingTieBreakers::chooseMaxDegree
-            //"Min Degree" to ReducingTieBreakers::chooseMinDegree
+            "First" to ReducingTieBreakers::chooseFirst,
+            "Max Degree" to ReducingTieBreakers::chooseMaxDegree,
+            "Min Degree" to ReducingTieBreakers::chooseMinDegree
     )
     val secondTieBreakers = mapOf<String, (Graph<Int>, Collection<Int>) -> Int>(
-            "First" to FinalTieBreakers::chooseFirst
-            //"Max Neighbours Degree" to FinalTieBreakers::chooseMaxNeighboursDegree,
-            //"Min Neighbours Degree" to FinalTieBreakers::chooseMinNeighboursDegree,
-            //"Max Edges between Neighbours" to FinalTieBreakers::chooseMaxNeighboursEdges,
-            //"Min Edges between Neighbours" to FinalTieBreakers::chooseMinNeighboursEdges
+            "First" to FinalTieBreakers::chooseFirst,
+            "Max Neighbours Degree" to FinalTieBreakers::chooseMaxNeighboursDegree,
+            "Min Neighbours Degree" to FinalTieBreakers::chooseMinNeighboursDegree,
+            "Max Edges between Neighbours" to FinalTieBreakers::chooseMaxNeighboursEdges,
+            "Min Edges between Neighbours" to FinalTieBreakers::chooseMinNeighboursEdges
     )
 
     val printWriter = File("result_" + LocalDateTime.now().toString().replace(':', '.') + ".txt").apply { createNewFile() }.printWriter()

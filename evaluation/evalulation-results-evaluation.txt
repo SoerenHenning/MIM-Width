@@ -1,0 +1,46 @@
+# Consider values with 10 iterations
+How often could Tie-Breaker 'x' achieve the best result:
+
+First Tie-Breakers w/o 'Choose First'
+           10
+First       0
+Max Degree  4
+Min Degree  6
+
+First Tie-Breakers w/ 'Choose First'
+           10
+First       3
+Max Degree  4
+Min Degree  6
+
+Second Tie-Breakers (First Tie-Breaker 'Min Degree') w/o 'Choose First'
+                             10
+First                         0
+Max Edges between Neighbours  6
+Max Neighbours Degree         7
+Min Edges between Neighbours  5
+Min Neighbours Degree         7
+
+Second Tie-Breakers (First Tie-Breaker 'Max Degree') w/o 'Choose First'
+                             10
+First                         0
+Max Edges between Neighbours  4
+Max Neighbours Degree         4
+Min Edges between Neighbours  6
+Min Neighbours Degree         7
+
+Second Tie-Breakers (First Tie-Breaker 'Min Degree') w/ 'Choose First'
+                             10
+First                         5
+Max Edges between Neighbours  6
+Max Neighbours Degree         7
+Min Edges between Neighbours  5
+Min Neighbours Degree         7
+
+Second Tie-Breakers (First Tie-Breaker 'Max Degree') w/ 'Choose First'
+                             10
+First                         5
+Max Edges between Neighbours  4
+Max Neighbours Degree         4
+Min Edges between Neighbours  6
+Min Neighbours Degree         7

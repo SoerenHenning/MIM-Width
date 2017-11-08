@@ -1,0 +1,841 @@
+Graph;Vertices;Edges;Edge Density;Iterations;First Tie Breaker;Second Tie Breaker;MIM
+1awd.dgf;89;1080;0.27579162410623087;5;First;First;7
+1awd.dgf;89;1080;0.27579162410623087;5;First;Max Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;5;First;Min Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;5;First;Max Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;5;First;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;5;Max Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;5;Max Degree;Max Neighbours Degree;9
+1awd.dgf;89;1080;0.27579162410623087;5;Max Degree;Min Neighbours Degree;9
+1awd.dgf;89;1080;0.27579162410623087;5;Max Degree;Max Edges between Neighbours;8
+1awd.dgf;89;1080;0.27579162410623087;5;Max Degree;Min Edges between Neighbours;9
+1awd.dgf;89;1080;0.27579162410623087;5;Min Degree;First;7
+1awd.dgf;89;1080;0.27579162410623087;5;Min Degree;Max Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;5;Min Degree;Min Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;5;Min Degree;Max Edges between Neighbours;6
+1awd.dgf;89;1080;0.27579162410623087;5;Min Degree;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;10;First;First;7
+1awd.dgf;89;1080;0.27579162410623087;10;First;Max Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;10;First;Min Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;10;First;Max Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;10;First;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;10;Max Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;10;Max Degree;Max Neighbours Degree;9
+1awd.dgf;89;1080;0.27579162410623087;10;Max Degree;Min Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;10;Max Degree;Max Edges between Neighbours;9
+1awd.dgf;89;1080;0.27579162410623087;10;Max Degree;Min Edges between Neighbours;8
+1awd.dgf;89;1080;0.27579162410623087;10;Min Degree;First;7
+1awd.dgf;89;1080;0.27579162410623087;10;Min Degree;Max Neighbours Degree;6
+1awd.dgf;89;1080;0.27579162410623087;10;Min Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;10;Min Degree;Max Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;10;Min Degree;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;20;First;First;7
+1awd.dgf;89;1080;0.27579162410623087;20;First;Max Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;20;First;Min Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;20;First;Max Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;20;First;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;20;Max Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;20;Max Degree;Max Neighbours Degree;9
+1awd.dgf;89;1080;0.27579162410623087;20;Max Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;20;Max Degree;Max Edges between Neighbours;9
+1awd.dgf;89;1080;0.27579162410623087;20;Max Degree;Min Edges between Neighbours;8
+1awd.dgf;89;1080;0.27579162410623087;20;Min Degree;First;7
+1awd.dgf;89;1080;0.27579162410623087;20;Min Degree;Max Neighbours Degree;6
+1awd.dgf;89;1080;0.27579162410623087;20;Min Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;20;Min Degree;Max Edges between Neighbours;6
+1awd.dgf;89;1080;0.27579162410623087;20;Min Degree;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;30;First;First;7
+1awd.dgf;89;1080;0.27579162410623087;30;First;Max Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;30;First;Min Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;30;First;Max Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;30;First;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;30;Max Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;30;Max Degree;Max Neighbours Degree;9
+1awd.dgf;89;1080;0.27579162410623087;30;Max Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;30;Max Degree;Max Edges between Neighbours;9
+1awd.dgf;89;1080;0.27579162410623087;30;Max Degree;Min Edges between Neighbours;8
+1awd.dgf;89;1080;0.27579162410623087;30;Min Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;30;Min Degree;Max Neighbours Degree;6
+1awd.dgf;89;1080;0.27579162410623087;30;Min Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;30;Min Degree;Max Edges between Neighbours;6
+1awd.dgf;89;1080;0.27579162410623087;30;Min Degree;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;40;First;First;7
+1awd.dgf;89;1080;0.27579162410623087;40;First;Max Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;40;First;Min Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;40;First;Max Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;40;First;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;40;Max Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;40;Max Degree;Max Neighbours Degree;9
+1awd.dgf;89;1080;0.27579162410623087;40;Max Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;40;Max Degree;Max Edges between Neighbours;9
+1awd.dgf;89;1080;0.27579162410623087;40;Max Degree;Min Edges between Neighbours;8
+1awd.dgf;89;1080;0.27579162410623087;40;Min Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;40;Min Degree;Max Neighbours Degree;6
+1awd.dgf;89;1080;0.27579162410623087;40;Min Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;40;Min Degree;Max Edges between Neighbours;6
+1awd.dgf;89;1080;0.27579162410623087;40;Min Degree;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;50;First;First;7
+1awd.dgf;89;1080;0.27579162410623087;50;First;Max Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;50;First;Min Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;50;First;Max Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;50;First;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;50;Max Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;50;Max Degree;Max Neighbours Degree;9
+1awd.dgf;89;1080;0.27579162410623087;50;Max Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;50;Max Degree;Max Edges between Neighbours;9
+1awd.dgf;89;1080;0.27579162410623087;50;Max Degree;Min Edges between Neighbours;8
+1awd.dgf;89;1080;0.27579162410623087;50;Min Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;50;Min Degree;Max Neighbours Degree;6
+1awd.dgf;89;1080;0.27579162410623087;50;Min Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;50;Min Degree;Max Edges between Neighbours;6
+1awd.dgf;89;1080;0.27579162410623087;50;Min Degree;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;100;First;First;7
+1awd.dgf;89;1080;0.27579162410623087;100;First;Max Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;100;First;Min Neighbours Degree;7
+1awd.dgf;89;1080;0.27579162410623087;100;First;Max Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;100;First;Min Edges between Neighbours;7
+1awd.dgf;89;1080;0.27579162410623087;100;Max Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;100;Max Degree;Max Neighbours Degree;9
+1awd.dgf;89;1080;0.27579162410623087;100;Max Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;100;Max Degree;Max Edges between Neighbours;9
+1awd.dgf;89;1080;0.27579162410623087;100;Max Degree;Min Edges between Neighbours;8
+1awd.dgf;89;1080;0.27579162410623087;100;Min Degree;First;8
+1awd.dgf;89;1080;0.27579162410623087;100;Min Degree;Max Neighbours Degree;6
+1awd.dgf;89;1080;0.27579162410623087;100;Min Degree;Min Neighbours Degree;8
+1awd.dgf;89;1080;0.27579162410623087;100;Min Degree;Max Edges between Neighbours;6
+1awd.dgf;89;1080;0.27579162410623087;100;Min Degree;Min Edges between Neighbours;7
+BN_28.dgf;24;49;0.17753623188405798;5;First;First;2
+BN_28.dgf;24;49;0.17753623188405798;5;First;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;5;First;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;5;First;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;5;First;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;5;Max Degree;First;3
+BN_28.dgf;24;49;0.17753623188405798;5;Max Degree;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;5;Max Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;5;Max Degree;Max Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;5;Max Degree;Min Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;5;Min Degree;First;2
+BN_28.dgf;24;49;0.17753623188405798;5;Min Degree;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;5;Min Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;5;Min Degree;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;5;Min Degree;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;10;First;First;2
+BN_28.dgf;24;49;0.17753623188405798;10;First;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;10;First;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;10;First;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;10;First;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;10;Max Degree;First;3
+BN_28.dgf;24;49;0.17753623188405798;10;Max Degree;Max Neighbours Degree;3
+BN_28.dgf;24;49;0.17753623188405798;10;Max Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;10;Max Degree;Max Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;10;Max Degree;Min Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;10;Min Degree;First;2
+BN_28.dgf;24;49;0.17753623188405798;10;Min Degree;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;10;Min Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;10;Min Degree;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;10;Min Degree;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;20;First;First;2
+BN_28.dgf;24;49;0.17753623188405798;20;First;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;20;First;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;20;First;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;20;First;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;20;Max Degree;First;3
+BN_28.dgf;24;49;0.17753623188405798;20;Max Degree;Max Neighbours Degree;3
+BN_28.dgf;24;49;0.17753623188405798;20;Max Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;20;Max Degree;Max Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;20;Max Degree;Min Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;20;Min Degree;First;2
+BN_28.dgf;24;49;0.17753623188405798;20;Min Degree;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;20;Min Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;20;Min Degree;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;20;Min Degree;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;30;First;First;2
+BN_28.dgf;24;49;0.17753623188405798;30;First;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;30;First;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;30;First;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;30;First;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;30;Max Degree;First;3
+BN_28.dgf;24;49;0.17753623188405798;30;Max Degree;Max Neighbours Degree;3
+BN_28.dgf;24;49;0.17753623188405798;30;Max Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;30;Max Degree;Max Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;30;Max Degree;Min Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;30;Min Degree;First;2
+BN_28.dgf;24;49;0.17753623188405798;30;Min Degree;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;30;Min Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;30;Min Degree;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;30;Min Degree;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;40;First;First;2
+BN_28.dgf;24;49;0.17753623188405798;40;First;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;40;First;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;40;First;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;40;First;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;40;Max Degree;First;3
+BN_28.dgf;24;49;0.17753623188405798;40;Max Degree;Max Neighbours Degree;3
+BN_28.dgf;24;49;0.17753623188405798;40;Max Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;40;Max Degree;Max Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;40;Max Degree;Min Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;40;Min Degree;First;2
+BN_28.dgf;24;49;0.17753623188405798;40;Min Degree;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;40;Min Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;40;Min Degree;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;40;Min Degree;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;50;First;First;2
+BN_28.dgf;24;49;0.17753623188405798;50;First;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;50;First;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;50;First;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;50;First;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;50;Max Degree;First;3
+BN_28.dgf;24;49;0.17753623188405798;50;Max Degree;Max Neighbours Degree;3
+BN_28.dgf;24;49;0.17753623188405798;50;Max Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;50;Max Degree;Max Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;50;Max Degree;Min Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;50;Min Degree;First;2
+BN_28.dgf;24;49;0.17753623188405798;50;Min Degree;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;50;Min Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;50;Min Degree;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;50;Min Degree;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;100;First;First;2
+BN_28.dgf;24;49;0.17753623188405798;100;First;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;100;First;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;100;First;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;100;First;Min Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;100;Max Degree;First;3
+BN_28.dgf;24;49;0.17753623188405798;100;Max Degree;Max Neighbours Degree;3
+BN_28.dgf;24;49;0.17753623188405798;100;Max Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;100;Max Degree;Max Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;100;Max Degree;Min Edges between Neighbours;3
+BN_28.dgf;24;49;0.17753623188405798;100;Min Degree;First;2
+BN_28.dgf;24;49;0.17753623188405798;100;Min Degree;Max Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;100;Min Degree;Min Neighbours Degree;2
+BN_28.dgf;24;49;0.17753623188405798;100;Min Degree;Max Edges between Neighbours;2
+BN_28.dgf;24;49;0.17753623188405798;100;Min Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;5;First;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;5;First;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;5;First;Min Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;5;First;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;5;First;Min Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;5;Max Degree;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;5;Max Degree;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;5;Max Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;5;Max Degree;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;5;Max Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;5;Min Degree;First;2
+celar06-wpp.dgf;34;156;0.27807486631016043;5;Min Degree;Max Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;5;Min Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;5;Min Degree;Max Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;5;Min Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;10;First;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;10;First;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;10;First;Min Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;10;First;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;10;First;Min Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;10;Max Degree;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;10;Max Degree;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;10;Max Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;10;Max Degree;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;10;Max Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;10;Min Degree;First;2
+celar06-wpp.dgf;34;156;0.27807486631016043;10;Min Degree;Max Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;10;Min Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;10;Min Degree;Max Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;10;Min Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;20;First;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;20;First;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;20;First;Min Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;20;First;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;20;First;Min Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;20;Max Degree;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;20;Max Degree;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;20;Max Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;20;Max Degree;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;20;Max Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;20;Min Degree;First;2
+celar06-wpp.dgf;34;156;0.27807486631016043;20;Min Degree;Max Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;20;Min Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;20;Min Degree;Max Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;20;Min Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;30;First;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;30;First;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;30;First;Min Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;30;First;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;30;First;Min Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;30;Max Degree;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;30;Max Degree;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;30;Max Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;30;Max Degree;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;30;Max Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;30;Min Degree;First;2
+celar06-wpp.dgf;34;156;0.27807486631016043;30;Min Degree;Max Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;30;Min Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;30;Min Degree;Max Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;30;Min Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;40;First;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;40;First;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;40;First;Min Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;40;First;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;40;First;Min Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;40;Max Degree;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;40;Max Degree;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;40;Max Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;40;Max Degree;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;40;Max Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;40;Min Degree;First;2
+celar06-wpp.dgf;34;156;0.27807486631016043;40;Min Degree;Max Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;40;Min Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;40;Min Degree;Max Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;40;Min Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;50;First;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;50;First;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;50;First;Min Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;50;First;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;50;First;Min Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;50;Max Degree;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;50;Max Degree;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;50;Max Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;50;Max Degree;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;50;Max Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;50;Min Degree;First;2
+celar06-wpp.dgf;34;156;0.27807486631016043;50;Min Degree;Max Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;50;Min Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;50;Min Degree;Max Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;50;Min Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;100;First;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;100;First;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;100;First;Min Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;100;First;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;100;First;Min Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;100;Max Degree;First;3
+celar06-wpp.dgf;34;156;0.27807486631016043;100;Max Degree;Max Neighbours Degree;3
+celar06-wpp.dgf;34;156;0.27807486631016043;100;Max Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;100;Max Degree;Max Edges between Neighbours;3
+celar06-wpp.dgf;34;156;0.27807486631016043;100;Max Degree;Min Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;100;Min Degree;First;2
+celar06-wpp.dgf;34;156;0.27807486631016043;100;Min Degree;Max Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;100;Min Degree;Min Neighbours Degree;2
+celar06-wpp.dgf;34;156;0.27807486631016043;100;Min Degree;Max Edges between Neighbours;2
+celar06-wpp.dgf;34;156;0.27807486631016043;100;Min Degree;Min Edges between Neighbours;2
+eil51.tsp.dgf;51;140;0.10980392156862745;5;First;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;5;First;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;5;First;Min Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;5;First;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;5;First;Min Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;5;Max Degree;First;5
+eil51.tsp.dgf;51;140;0.10980392156862745;5;Max Degree;Max Neighbours Degree;7
+eil51.tsp.dgf;51;140;0.10980392156862745;5;Max Degree;Min Neighbours Degree;8
+eil51.tsp.dgf;51;140;0.10980392156862745;5;Max Degree;Max Edges between Neighbours;7
+eil51.tsp.dgf;51;140;0.10980392156862745;5;Max Degree;Min Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;5;Min Degree;First;4
+eil51.tsp.dgf;51;140;0.10980392156862745;5;Min Degree;Max Neighbours Degree;5
+eil51.tsp.dgf;51;140;0.10980392156862745;5;Min Degree;Min Neighbours Degree;5
+eil51.tsp.dgf;51;140;0.10980392156862745;5;Min Degree;Max Edges between Neighbours;5
+eil51.tsp.dgf;51;140;0.10980392156862745;5;Min Degree;Min Edges between Neighbours;4
+eil51.tsp.dgf;51;140;0.10980392156862745;10;First;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;10;First;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;10;First;Min Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;10;First;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;10;First;Min Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;10;Max Degree;First;7
+eil51.tsp.dgf;51;140;0.10980392156862745;10;Max Degree;Max Neighbours Degree;9
+eil51.tsp.dgf;51;140;0.10980392156862745;10;Max Degree;Min Neighbours Degree;8
+eil51.tsp.dgf;51;140;0.10980392156862745;10;Max Degree;Max Edges between Neighbours;8
+eil51.tsp.dgf;51;140;0.10980392156862745;10;Max Degree;Min Edges between Neighbours;7
+eil51.tsp.dgf;51;140;0.10980392156862745;10;Min Degree;First;5
+eil51.tsp.dgf;51;140;0.10980392156862745;10;Min Degree;Max Neighbours Degree;5
+eil51.tsp.dgf;51;140;0.10980392156862745;10;Min Degree;Min Neighbours Degree;4
+eil51.tsp.dgf;51;140;0.10980392156862745;10;Min Degree;Max Edges between Neighbours;5
+eil51.tsp.dgf;51;140;0.10980392156862745;10;Min Degree;Min Edges between Neighbours;5
+eil51.tsp.dgf;51;140;0.10980392156862745;20;First;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;20;First;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;20;First;Min Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;20;First;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;20;First;Min Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;20;Max Degree;First;7
+eil51.tsp.dgf;51;140;0.10980392156862745;20;Max Degree;Max Neighbours Degree;8
+eil51.tsp.dgf;51;140;0.10980392156862745;20;Max Degree;Min Neighbours Degree;7
+eil51.tsp.dgf;51;140;0.10980392156862745;20;Max Degree;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;20;Max Degree;Min Edges between Neighbours;7
+eil51.tsp.dgf;51;140;0.10980392156862745;20;Min Degree;First;5
+eil51.tsp.dgf;51;140;0.10980392156862745;20;Min Degree;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;20;Min Degree;Min Neighbours Degree;4
+eil51.tsp.dgf;51;140;0.10980392156862745;20;Min Degree;Max Edges between Neighbours;5
+eil51.tsp.dgf;51;140;0.10980392156862745;20;Min Degree;Min Edges between Neighbours;4
+eil51.tsp.dgf;51;140;0.10980392156862745;30;First;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;30;First;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;30;First;Min Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;30;First;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;30;First;Min Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;30;Max Degree;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;30;Max Degree;Max Neighbours Degree;8
+eil51.tsp.dgf;51;140;0.10980392156862745;30;Max Degree;Min Neighbours Degree;7
+eil51.tsp.dgf;51;140;0.10980392156862745;30;Max Degree;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;30;Max Degree;Min Edges between Neighbours;7
+eil51.tsp.dgf;51;140;0.10980392156862745;30;Min Degree;First;5
+eil51.tsp.dgf;51;140;0.10980392156862745;30;Min Degree;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;30;Min Degree;Min Neighbours Degree;4
+eil51.tsp.dgf;51;140;0.10980392156862745;30;Min Degree;Max Edges between Neighbours;5
+eil51.tsp.dgf;51;140;0.10980392156862745;30;Min Degree;Min Edges between Neighbours;4
+eil51.tsp.dgf;51;140;0.10980392156862745;40;First;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;40;First;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;40;First;Min Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;40;First;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;40;First;Min Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;40;Max Degree;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;40;Max Degree;Max Neighbours Degree;8
+eil51.tsp.dgf;51;140;0.10980392156862745;40;Max Degree;Min Neighbours Degree;7
+eil51.tsp.dgf;51;140;0.10980392156862745;40;Max Degree;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;40;Max Degree;Min Edges between Neighbours;7
+eil51.tsp.dgf;51;140;0.10980392156862745;40;Min Degree;First;5
+eil51.tsp.dgf;51;140;0.10980392156862745;40;Min Degree;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;40;Min Degree;Min Neighbours Degree;4
+eil51.tsp.dgf;51;140;0.10980392156862745;40;Min Degree;Max Edges between Neighbours;5
+eil51.tsp.dgf;51;140;0.10980392156862745;40;Min Degree;Min Edges between Neighbours;4
+eil51.tsp.dgf;51;140;0.10980392156862745;50;First;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;50;First;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;50;First;Min Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;50;First;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;50;First;Min Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;50;Max Degree;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;50;Max Degree;Max Neighbours Degree;8
+eil51.tsp.dgf;51;140;0.10980392156862745;50;Max Degree;Min Neighbours Degree;7
+eil51.tsp.dgf;51;140;0.10980392156862745;50;Max Degree;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;50;Max Degree;Min Edges between Neighbours;7
+eil51.tsp.dgf;51;140;0.10980392156862745;50;Min Degree;First;5
+eil51.tsp.dgf;51;140;0.10980392156862745;50;Min Degree;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;50;Min Degree;Min Neighbours Degree;4
+eil51.tsp.dgf;51;140;0.10980392156862745;50;Min Degree;Max Edges between Neighbours;5
+eil51.tsp.dgf;51;140;0.10980392156862745;50;Min Degree;Min Edges between Neighbours;4
+eil51.tsp.dgf;51;140;0.10980392156862745;100;First;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;100;First;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;100;First;Min Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;100;First;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;100;First;Min Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;100;Max Degree;First;6
+eil51.tsp.dgf;51;140;0.10980392156862745;100;Max Degree;Max Neighbours Degree;8
+eil51.tsp.dgf;51;140;0.10980392156862745;100;Max Degree;Min Neighbours Degree;7
+eil51.tsp.dgf;51;140;0.10980392156862745;100;Max Degree;Max Edges between Neighbours;6
+eil51.tsp.dgf;51;140;0.10980392156862745;100;Max Degree;Min Edges between Neighbours;7
+eil51.tsp.dgf;51;140;0.10980392156862745;100;Min Degree;First;5
+eil51.tsp.dgf;51;140;0.10980392156862745;100;Min Degree;Max Neighbours Degree;6
+eil51.tsp.dgf;51;140;0.10980392156862745;100;Min Degree;Min Neighbours Degree;4
+eil51.tsp.dgf;51;140;0.10980392156862745;100;Min Degree;Max Edges between Neighbours;5
+eil51.tsp.dgf;51;140;0.10980392156862745;100;Min Degree;Min Edges between Neighbours;4
+miles1500.dgf;128;5198;0.6395177165354331;5;First;First;3
+miles1500.dgf;128;5198;0.6395177165354331;5;First;Max Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;5;First;Min Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;5;First;Max Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;5;First;Min Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;5;Max Degree;First;1
+miles1500.dgf;128;5198;0.6395177165354331;5;Max Degree;Max Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;5;Max Degree;Min Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;5;Max Degree;Max Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;5;Max Degree;Min Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;5;Min Degree;First;2
+miles1500.dgf;128;5198;0.6395177165354331;5;Min Degree;Max Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;5;Min Degree;Min Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;5;Min Degree;Max Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;5;Min Degree;Min Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;10;First;First;3
+miles1500.dgf;128;5198;0.6395177165354331;10;First;Max Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;10;First;Min Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;10;First;Max Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;10;First;Min Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;10;Max Degree;First;1
+miles1500.dgf;128;5198;0.6395177165354331;10;Max Degree;Max Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;10;Max Degree;Min Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;10;Max Degree;Max Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;10;Max Degree;Min Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;10;Min Degree;First;2
+miles1500.dgf;128;5198;0.6395177165354331;10;Min Degree;Max Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;10;Min Degree;Min Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;10;Min Degree;Max Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;10;Min Degree;Min Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;20;First;First;3
+miles1500.dgf;128;5198;0.6395177165354331;20;First;Max Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;20;First;Min Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;20;First;Max Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;20;First;Min Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;20;Max Degree;First;1
+miles1500.dgf;128;5198;0.6395177165354331;20;Max Degree;Max Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;20;Max Degree;Min Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;20;Max Degree;Max Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;20;Max Degree;Min Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;20;Min Degree;First;2
+miles1500.dgf;128;5198;0.6395177165354331;20;Min Degree;Max Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;20;Min Degree;Min Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;20;Min Degree;Max Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;20;Min Degree;Min Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;30;First;First;3
+miles1500.dgf;128;5198;0.6395177165354331;30;First;Max Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;30;First;Min Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;30;First;Max Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;30;First;Min Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;30;Max Degree;First;1
+miles1500.dgf;128;5198;0.6395177165354331;30;Max Degree;Max Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;30;Max Degree;Min Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;30;Max Degree;Max Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;30;Max Degree;Min Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;30;Min Degree;First;2
+miles1500.dgf;128;5198;0.6395177165354331;30;Min Degree;Max Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;30;Min Degree;Min Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;30;Min Degree;Max Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;30;Min Degree;Min Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;40;First;First;3
+miles1500.dgf;128;5198;0.6395177165354331;40;First;Max Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;40;First;Min Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;40;First;Max Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;40;First;Min Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;40;Max Degree;First;1
+miles1500.dgf;128;5198;0.6395177165354331;40;Max Degree;Max Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;40;Max Degree;Min Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;40;Max Degree;Max Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;40;Max Degree;Min Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;40;Min Degree;First;2
+miles1500.dgf;128;5198;0.6395177165354331;40;Min Degree;Max Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;40;Min Degree;Min Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;40;Min Degree;Max Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;40;Min Degree;Min Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;50;First;First;3
+miles1500.dgf;128;5198;0.6395177165354331;50;First;Max Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;50;First;Min Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;50;First;Max Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;50;First;Min Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;50;Max Degree;First;1
+miles1500.dgf;128;5198;0.6395177165354331;50;Max Degree;Max Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;50;Max Degree;Min Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;50;Max Degree;Max Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;50;Max Degree;Min Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;50;Min Degree;First;2
+miles1500.dgf;128;5198;0.6395177165354331;50;Min Degree;Max Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;50;Min Degree;Min Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;50;Min Degree;Max Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;50;Min Degree;Min Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;100;First;First;3
+miles1500.dgf;128;5198;0.6395177165354331;100;First;Max Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;100;First;Min Neighbours Degree;3
+miles1500.dgf;128;5198;0.6395177165354331;100;First;Max Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;100;First;Min Edges between Neighbours;3
+miles1500.dgf;128;5198;0.6395177165354331;100;Max Degree;First;1
+miles1500.dgf;128;5198;0.6395177165354331;100;Max Degree;Max Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;100;Max Degree;Min Neighbours Degree;1
+miles1500.dgf;128;5198;0.6395177165354331;100;Max Degree;Max Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;100;Max Degree;Min Edges between Neighbours;1
+miles1500.dgf;128;5198;0.6395177165354331;100;Min Degree;First;2
+miles1500.dgf;128;5198;0.6395177165354331;100;Min Degree;Max Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;100;Min Degree;Min Neighbours Degree;2
+miles1500.dgf;128;5198;0.6395177165354331;100;Min Degree;Max Edges between Neighbours;2
+miles1500.dgf;128;5198;0.6395177165354331;100;Min Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;First;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;First;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;First;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;First;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;First;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;Max Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;Max Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;Max Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;Max Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;Max Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;Min Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;Min Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;Min Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;Min Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;5;Min Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;First;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;First;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;First;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;First;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;First;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;Max Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;Max Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;Max Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;Max Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;Max Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;Min Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;Min Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;Min Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;Min Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;10;Min Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;First;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;First;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;First;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;First;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;First;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;Max Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;Max Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;Max Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;Max Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;Max Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;Min Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;Min Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;Min Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;Min Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;20;Min Degree;Min Edges between Neighbours;3
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;First;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;First;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;First;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;First;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;First;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;Max Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;Max Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;Max Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;Max Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;Max Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;Min Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;Min Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;Min Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;Min Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;30;Min Degree;Min Edges between Neighbours;3
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;First;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;First;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;First;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;First;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;First;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;Max Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;Max Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;Max Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;Max Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;Max Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;Min Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;Min Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;Min Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;Min Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;40;Min Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;First;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;First;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;First;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;First;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;First;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;Max Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;Max Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;Max Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;Max Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;Max Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;Min Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;Min Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;Min Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;Min Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;50;Min Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;First;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;First;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;First;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;First;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;First;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;Max Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;Max Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;Max Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;Max Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;Max Degree;Min Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;Min Degree;First;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;Min Degree;Max Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;Min Degree;Min Neighbours Degree;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;Min Degree;Max Edges between Neighbours;2
+mulsol.i.5.dgf;186;3973;0.23092124382446963;100;Min Degree;Min Edges between Neighbours;2
+queen8_12.col;96;1368;0.3;5;First;First;10
+queen8_12.col;96;1368;0.3;5;First;Max Neighbours Degree;10
+queen8_12.col;96;1368;0.3;5;First;Min Neighbours Degree;10
+queen8_12.col;96;1368;0.3;5;First;Max Edges between Neighbours;10
+queen8_12.col;96;1368;0.3;5;First;Min Edges between Neighbours;10
+queen8_12.col;96;1368;0.3;5;Max Degree;First;9
+queen8_12.col;96;1368;0.3;5;Max Degree;Max Neighbours Degree;8
+queen8_12.col;96;1368;0.3;5;Max Degree;Min Neighbours Degree;9
+queen8_12.col;96;1368;0.3;5;Max Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;5;Max Degree;Min Edges between Neighbours;9
+queen8_12.col;96;1368;0.3;5;Min Degree;First;11
+queen8_12.col;96;1368;0.3;5;Min Degree;Max Neighbours Degree;8
+queen8_12.col;96;1368;0.3;5;Min Degree;Min Neighbours Degree;8
+queen8_12.col;96;1368;0.3;5;Min Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;5;Min Degree;Min Edges between Neighbours;10
+queen8_12.col;96;1368;0.3;10;First;First;10
+queen8_12.col;96;1368;0.3;10;First;Max Neighbours Degree;10
+queen8_12.col;96;1368;0.3;10;First;Min Neighbours Degree;10
+queen8_12.col;96;1368;0.3;10;First;Max Edges between Neighbours;10
+queen8_12.col;96;1368;0.3;10;First;Min Edges between Neighbours;10
+queen8_12.col;96;1368;0.3;10;Max Degree;First;8
+queen8_12.col;96;1368;0.3;10;Max Degree;Max Neighbours Degree;8
+queen8_12.col;96;1368;0.3;10;Max Degree;Min Neighbours Degree;8
+queen8_12.col;96;1368;0.3;10;Max Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;10;Max Degree;Min Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;10;Min Degree;First;11
+queen8_12.col;96;1368;0.3;10;Min Degree;Max Neighbours Degree;8
+queen8_12.col;96;1368;0.3;10;Min Degree;Min Neighbours Degree;8
+queen8_12.col;96;1368;0.3;10;Min Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;10;Min Degree;Min Edges between Neighbours;9
+queen8_12.col;96;1368;0.3;20;First;First;11
+queen8_12.col;96;1368;0.3;20;First;Max Neighbours Degree;11
+queen8_12.col;96;1368;0.3;20;First;Min Neighbours Degree;11
+queen8_12.col;96;1368;0.3;20;First;Max Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;20;First;Min Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;20;Max Degree;First;8
+queen8_12.col;96;1368;0.3;20;Max Degree;Max Neighbours Degree;8
+queen8_12.col;96;1368;0.3;20;Max Degree;Min Neighbours Degree;8
+queen8_12.col;96;1368;0.3;20;Max Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;20;Max Degree;Min Edges between Neighbours;9
+queen8_12.col;96;1368;0.3;20;Min Degree;First;11
+queen8_12.col;96;1368;0.3;20;Min Degree;Max Neighbours Degree;8
+queen8_12.col;96;1368;0.3;20;Min Degree;Min Neighbours Degree;10
+queen8_12.col;96;1368;0.3;20;Min Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;20;Min Degree;Min Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;30;First;First;11
+queen8_12.col;96;1368;0.3;30;First;Max Neighbours Degree;11
+queen8_12.col;96;1368;0.3;30;First;Min Neighbours Degree;11
+queen8_12.col;96;1368;0.3;30;First;Max Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;30;First;Min Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;30;Max Degree;First;8
+queen8_12.col;96;1368;0.3;30;Max Degree;Max Neighbours Degree;9
+queen8_12.col;96;1368;0.3;30;Max Degree;Min Neighbours Degree;8
+queen8_12.col;96;1368;0.3;30;Max Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;30;Max Degree;Min Edges between Neighbours;9
+queen8_12.col;96;1368;0.3;30;Min Degree;First;10
+queen8_12.col;96;1368;0.3;30;Min Degree;Max Neighbours Degree;8
+queen8_12.col;96;1368;0.3;30;Min Degree;Min Neighbours Degree;9
+queen8_12.col;96;1368;0.3;30;Min Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;30;Min Degree;Min Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;40;First;First;10
+queen8_12.col;96;1368;0.3;40;First;Max Neighbours Degree;10
+queen8_12.col;96;1368;0.3;40;First;Min Neighbours Degree;10
+queen8_12.col;96;1368;0.3;40;First;Max Edges between Neighbours;10
+queen8_12.col;96;1368;0.3;40;First;Min Edges between Neighbours;10
+queen8_12.col;96;1368;0.3;40;Max Degree;First;8
+queen8_12.col;96;1368;0.3;40;Max Degree;Max Neighbours Degree;9
+queen8_12.col;96;1368;0.3;40;Max Degree;Min Neighbours Degree;8
+queen8_12.col;96;1368;0.3;40;Max Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;40;Max Degree;Min Edges between Neighbours;9
+queen8_12.col;96;1368;0.3;40;Min Degree;First;11
+queen8_12.col;96;1368;0.3;40;Min Degree;Max Neighbours Degree;8
+queen8_12.col;96;1368;0.3;40;Min Degree;Min Neighbours Degree;10
+queen8_12.col;96;1368;0.3;40;Min Degree;Max Edges between Neighbours;9
+queen8_12.col;96;1368;0.3;40;Min Degree;Min Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;50;First;First;11
+queen8_12.col;96;1368;0.3;50;First;Max Neighbours Degree;11
+queen8_12.col;96;1368;0.3;50;First;Min Neighbours Degree;11
+queen8_12.col;96;1368;0.3;50;First;Max Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;50;First;Min Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;50;Max Degree;First;9
+queen8_12.col;96;1368;0.3;50;Max Degree;Max Neighbours Degree;9
+queen8_12.col;96;1368;0.3;50;Max Degree;Min Neighbours Degree;8
+queen8_12.col;96;1368;0.3;50;Max Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;50;Max Degree;Min Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;50;Min Degree;First;11
+queen8_12.col;96;1368;0.3;50;Min Degree;Max Neighbours Degree;8
+queen8_12.col;96;1368;0.3;50;Min Degree;Min Neighbours Degree;10
+queen8_12.col;96;1368;0.3;50;Min Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;50;Min Degree;Min Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;100;First;First;11
+queen8_12.col;96;1368;0.3;100;First;Max Neighbours Degree;11
+queen8_12.col;96;1368;0.3;100;First;Min Neighbours Degree;11
+queen8_12.col;96;1368;0.3;100;First;Max Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;100;First;Min Edges between Neighbours;11
+queen8_12.col;96;1368;0.3;100;Max Degree;First;8
+queen8_12.col;96;1368;0.3;100;Max Degree;Max Neighbours Degree;9
+queen8_12.col;96;1368;0.3;100;Max Degree;Min Neighbours Degree;9
+queen8_12.col;96;1368;0.3;100;Max Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;100;Max Degree;Min Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;100;Min Degree;First;11
+queen8_12.col;96;1368;0.3;100;Min Degree;Max Neighbours Degree;8
+queen8_12.col;96;1368;0.3;100;Min Degree;Min Neighbours Degree;10
+queen8_12.col;96;1368;0.3;100;Min Degree;Max Edges between Neighbours;8
+queen8_12.col;96;1368;0.3;100;Min Degree;Min Edges between Neighbours;11
+zeroin.i.1.col;211;4100;0.18505980591288648;5;First;First;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;First;Max Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;First;Min Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;First;Max Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;First;Min Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;Max Degree;First;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;Max Degree;Max Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;Max Degree;Min Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;Max Degree;Max Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;Max Degree;Min Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;Min Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;5;Min Degree;Max Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;5;Min Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;5;Min Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;5;Min Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;10;First;First;3
+zeroin.i.1.col;211;4100;0.18505980591288648;10;First;Max Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;10;First;Min Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;10;First;Max Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;10;First;Min Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;10;Max Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;10;Max Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;10;Max Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;10;Max Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;10;Max Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;10;Min Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;10;Min Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;10;Min Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;10;Min Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;10;Min Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;20;First;First;3
+zeroin.i.1.col;211;4100;0.18505980591288648;20;First;Max Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;20;First;Min Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;20;First;Max Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;20;First;Min Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;20;Max Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;20;Max Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;20;Max Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;20;Max Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;20;Max Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;20;Min Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;20;Min Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;20;Min Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;20;Min Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;20;Min Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;30;First;First;3
+zeroin.i.1.col;211;4100;0.18505980591288648;30;First;Max Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;30;First;Min Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;30;First;Max Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;30;First;Min Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;30;Max Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;30;Max Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;30;Max Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;30;Max Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;30;Max Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;30;Min Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;30;Min Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;30;Min Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;30;Min Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;30;Min Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;40;First;First;3
+zeroin.i.1.col;211;4100;0.18505980591288648;40;First;Max Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;40;First;Min Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;40;First;Max Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;40;First;Min Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;40;Max Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;40;Max Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;40;Max Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;40;Max Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;40;Max Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;40;Min Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;40;Min Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;40;Min Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;40;Min Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;40;Min Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;50;First;First;3
+zeroin.i.1.col;211;4100;0.18505980591288648;50;First;Max Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;50;First;Min Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;50;First;Max Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;50;First;Min Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;50;Max Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;50;Max Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;50;Max Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;50;Max Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;50;Max Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;50;Min Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;50;Min Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;50;Min Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;50;Min Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;50;Min Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;100;First;First;3
+zeroin.i.1.col;211;4100;0.18505980591288648;100;First;Max Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;100;First;Min Neighbours Degree;3
+zeroin.i.1.col;211;4100;0.18505980591288648;100;First;Max Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;100;First;Min Edges between Neighbours;3
+zeroin.i.1.col;211;4100;0.18505980591288648;100;Max Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;100;Max Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;100;Max Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;100;Max Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;100;Max Degree;Min Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;100;Min Degree;First;2
+zeroin.i.1.col;211;4100;0.18505980591288648;100;Min Degree;Max Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;100;Min Degree;Min Neighbours Degree;2
+zeroin.i.1.col;211;4100;0.18505980591288648;100;Min Degree;Max Edges between Neighbours;2
+zeroin.i.1.col;211;4100;0.18505980591288648;100;Min Degree;Min Edges between Neighbours;2

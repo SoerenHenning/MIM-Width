@@ -8,7 +8,7 @@ class TreeDecompositor<T>(
         private val graph: Graph<T>,
         private val firstTieBreaker: (Graph<T>, Collection<T>) -> Iterable<T> = ReducingTieBreakers::chooseMaxDegree,
         private val secondTieBreaker: (Graph<T>, Collection<T>) -> T = FinalTieBreakers::chooseMaxNeighboursDegree,
-        private val iterations: Int = 100, //TODO
+        private val iterations: Int = 5,
         private val random: Random = Random()
 ) {
 
@@ -55,7 +55,7 @@ class TreeDecompositor<T>(
             val mimS = if (graph.degree(vertex) == 0) 0 else 1
             // mim(V-S) = <use heuristic>
             val cut = createCut(graph, vertices.minus(vertex))
-            val mimVminusS = computeMimHeuristic(cut).size
+            val mimVminusS = estimateMim(cut).size
             val maxMim = maxOf(mimS, mimVminusS)
             if (maxMim < smallestMim) {
                 smallestMim = maxMim
@@ -81,21 +81,28 @@ class TreeDecompositor<T>(
         }
     }
 
-    // Graph should be a cut
-    private fun computeMimHeuristic(graph: Graph<T>) : Set<EndpointPair<T>> {
+    /**
+     * This method is a heuristic to compute the maximum induced matching (MIM)
+     * for a given graph.
+     *
+     * It uses a simply greedy approach by adding consequently the edge to the
+     * induced matching whose endpoints have the highest degree. Thus, it only
+     * finds local optima and there is no guaranty about the quality of the
+     * solution.
+     */
+    private fun estimateMim(graph: Graph<T>) : Set<EndpointPair<T>> {
         var maximumInducedMatching = emptySet<EndpointPair<T>>()
         for (i in 1..iterations) {
             val remainingGraph = Graphs.copyOf(graph)
-            val maximumInducedMatchingTemp = HashSet<EndpointPair<T>>()
+            val temporaryMaximumInducedMatching = HashSet<EndpointPair<T>>()
             while (remainingGraph.edges().isNotEmpty()) {
-                val edgesWithLowestDegrees = ArrayList<EndpointPair<T>>()
+                var edgesWithLowestDegrees = mutableListOf<EndpointPair<T>>()
                 var lowestDegree = Int.MAX_VALUE
                 for (edge in remainingGraph.edges()) {
                     val degree = edge.asSequence().map { x -> remainingGraph.degree(x) }.sum()
                     if (degree < lowestDegree) {
                         lowestDegree = degree
-                        edgesWithLowestDegrees.clear()
-                        edgesWithLowestDegrees.add(edge)
+                        edgesWithLowestDegrees = mutableListOf(edge)
                     } else if (degree == lowestDegree) {
                         edgesWithLowestDegrees.add(edge)
                     }
@@ -110,16 +117,16 @@ class TreeDecompositor<T>(
                 for (node in selectedEdge) {
                     for (adjacentNode in remainingGraph.adjacentNodes(node).toList()) {
                         remainingGraph.removeEdge(node, adjacentNode)
-                        for (adjacentNode2 in remainingGraph.adjacentNodes(adjacentNode).toList()) {
-                            remainingGraph.removeEdge(adjacentNode, adjacentNode2)
+                        for (adjacentAdjacentNode in remainingGraph.adjacentNodes(adjacentNode).toList()) {
+                            remainingGraph.removeEdge(adjacentNode, adjacentAdjacentNode)
                         }
                     }
                 }
 
-                maximumInducedMatchingTemp.add(selectedEdge)
+                temporaryMaximumInducedMatching.add(selectedEdge)
             }
-            if (maximumInducedMatchingTemp.size > maximumInducedMatching.size) {
-                maximumInducedMatching = maximumInducedMatchingTemp
+            if (temporaryMaximumInducedMatching.size > maximumInducedMatching.size) {
+                maximumInducedMatching = temporaryMaximumInducedMatching
             }
         }
         return maximumInducedMatching

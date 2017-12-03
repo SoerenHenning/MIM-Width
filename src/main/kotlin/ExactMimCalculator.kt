@@ -28,7 +28,7 @@ class ExactMimCalculator<T>(private val graph: Graph<T>, private val treeDecompo
 
     private fun isMimEqualsZero(graph: Graph<T>): Boolean {
         // MIM == 0 <=> No edge exists
-        return graph.edges().isEmpty();
+        return graph.edges().isEmpty()
     }
 
     private fun isMimGreaterOne(graph: Graph<T>): Boolean {
@@ -43,7 +43,7 @@ class ExactMimCalculator<T>(private val graph: Graph<T>, private val treeDecompo
                 }
             }
         }
-        return false;
+        return false
     }
 
     private fun isMimGreaterTwo(graph: Graph<T>): Boolean {
@@ -64,7 +64,7 @@ class ExactMimCalculator<T>(private val graph: Graph<T>, private val treeDecompo
                 }
             }
         }
-        return false;
+        return false
     }
 
 }

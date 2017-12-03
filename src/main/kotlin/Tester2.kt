@@ -48,7 +48,7 @@ private fun <T> computeMim(graph: Graph<T>): Int {
 
 private fun <T> isMimEqualsZero(graph: Graph<T>): Boolean {
     // MIM == 0 <=> No edge exists
-    return graph.edges().isEmpty();
+    return graph.edges().isEmpty()
 }
 
 private fun <T> isMimGreaterOne(graph: Graph<T>): Boolean {
@@ -60,17 +60,17 @@ private fun <T> isMimGreaterOne(graph: Graph<T>): Boolean {
             //if (firstSource != secondSource && firstTarget != secondSource && firstSource != secondTarget && firstTarget != secondTarget) {
             if (!graph.checkIfEdgesAreAdjacent(firstEdge, secondEdge)) {
                 if (!graph.containsEdgeBetween(firstEdge, secondEdge)) {
-                    return true;
+                    return true
                 }
 
             }
         }
     }
-    return false;
+    return false
 }
 
 private fun <T> isMimEqualsOne(graph: Graph<T>): Boolean {
-    return !isMimEqualsZero(graph) && !isMimGreaterOne(graph);
+    return !isMimEqualsZero(graph) && !isMimGreaterOne(graph)
 }
 
 // O(|E|^3 * 3 * |E|) = O(|E|^4)
@@ -82,13 +82,13 @@ private fun <T> isMimGreaterTwo(graph: Graph<T>): Boolean {
                 // if e1 and e2 and e3 not joined by an edge or facing each other => return true
                 if (!graph.checkIfEdgesAreAdjacent(firstEdge, secondEdge) && !graph.checkIfEdgesAreAdjacent(firstEdge, thirdEdge) && !graph.checkIfEdgesAreAdjacent(secondEdge, thirdEdge)) {
                     if (!graph.containsEdgeBetween(firstEdge, secondEdge) && !graph.containsEdgeBetween(firstEdge, thirdEdge) && !graph.containsEdgeBetween(secondEdge, thirdEdge)) {
-                        return true;
+                        return true
                     }
                 }
             }
         }
     }
-    return false;
+    return false
 }
 
 // O(|E|^3 * 3 * |E|) = O(|E|^4)
@@ -124,11 +124,11 @@ private fun <T> isMimGreaterTwo2(graph: Graph<T>): Boolean {
             }
         }
     }
-    return false;
+    return false
 }
 
 private fun <T> isMimEqualsTwo(graph: Graph<T>): Boolean {
-    return isMimGreaterOne(graph) && !isMimGreaterTwo2(graph);
+    return isMimGreaterOne(graph) && !isMimGreaterTwo2(graph)
 }
 
 // O(|E|)

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MIM-Width-Project.iml" filepath="$PROJECT_DIR$/MIM-Width-Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MIM-Width.iml" filepath="$PROJECT_DIR$/MIM-Width.iml" />
     </modules>
   </component>
 </project>

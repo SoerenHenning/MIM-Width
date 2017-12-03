@@ -1,9 +1,12 @@
+package de.soerenhenning.mimwidth.testers
+
 import com.google.common.graph.Graph
+import de.soerenhenning.mimwidth.*
+import de.soerenhenning.mimwidth.graphs.DimacsImporter
+import de.soerenhenning.mimwidth.graphs.ExampleGraphs
 import java.util.*
 
 fun main(args: Array<String>) {
-
-
 
     val directory = "graphs/twlib"
 
@@ -39,8 +42,8 @@ fun main(args: Array<String>) {
             //"graph01.dgf" //13
     )
 
-    val dimacsGraphs = dimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"))) }
-    val corruptedDimacsGraphs = corruptedDimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"),nodeIds = true)) }
+    val dimacsGraphs = dimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(ClasspathFileReader.build("$directory/$it"))) }
+    val corruptedDimacsGraphs = corruptedDimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(ClasspathFileReader.build("$directory/$it"),nodeIds = true)) }
     //val graphs = dimacsGraphs + corruptedDimacsGraph
     val graphs = ExampleGraphs.graphs.filter { it.graph.nodes().size in 60..100 }
 

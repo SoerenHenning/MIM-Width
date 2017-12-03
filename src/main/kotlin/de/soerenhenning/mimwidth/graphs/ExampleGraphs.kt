@@ -1,4 +1,7 @@
+package de.soerenhenning.mimwidth.graphs
+
 import com.google.common.graph.Graph
+import de.soerenhenning.mimwidth.ClasspathFileReader
 
 object ExampleGraphs {
 
@@ -301,11 +304,11 @@ object ExampleGraphs {
 
     val dimacsGraphs = dimacsGraphFiles
             .asSequence()
-            .map { NamedGraph(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"))) }
+            .map { NamedGraph(it, DimacsImporter.importGraph(ClasspathFileReader.build("$directory/$it"))) }
 
     val weightedDimacsGraphs = weightedDimacsGraphFiles
             .asSequence()
-            .map { NamedGraph(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"), nodeIds = true)) }
+            .map { NamedGraph(it, DimacsImporter.importGraph(ClasspathFileReader.build("$directory/$it"), nodeIds = true)) }
 
     val graphs = dimacsGraphs + weightedDimacsGraphs
 

@@ -1,7 +1,7 @@
-import com.google.common.graph.EndpointPair
+package de.soerenhenning.mimwidth
+
 import com.google.common.graph.Graph
-import com.google.common.graph.GraphBuilder
-import java.time.Instant
+import de.soerenhenning.mimwidth.graphs.createCut
 
 class ExactMimCalculator<T>(private val graph: Graph<T>, private val treeDecomposition: TreeDecomposition<T>) {
 

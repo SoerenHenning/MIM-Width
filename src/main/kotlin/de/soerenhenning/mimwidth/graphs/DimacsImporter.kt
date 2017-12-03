@@ -1,3 +1,5 @@
+package de.soerenhenning.mimwidth.graphs
+
 import com.google.common.graph.GraphBuilder
 import com.google.common.graph.MutableGraph
 import java.io.Reader
@@ -12,7 +14,7 @@ object DimacsImporter {
             builder: GraphBuilder<Any?> = GraphBuilder.undirected(),
             nodeIds: Boolean = false
     ): MutableGraph<Int> {
-        return importGraph(reader, builder, nodeIds, {n -> n})
+        return importGraph(reader, builder, nodeIds, { n -> n })
     }
 
     fun <V> importGraph(

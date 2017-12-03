@@ -1,6 +1,10 @@
+package de.soerenhenning.mimwidth.testers
+
 import com.google.common.graph.EndpointPair
 import com.google.common.graph.Graph
-import com.google.common.graph.GraphBuilder
+import de.soerenhenning.mimwidth.*
+import de.soerenhenning.mimwidth.graphs.DimacsImporter
+import de.soerenhenning.mimwidth.graphs.createCut
 import java.time.Instant
 import java.util.*
 
@@ -9,7 +13,7 @@ fun main(args: Array<String>) {
     //val graphFile = "example-graphs/celar06-wpp.dgf"
     //val graphFile = "example-graphs/zeroin.i.1.col"
     val graphFile = "example-graphs/miles1500.dgf"
-    val graph = DimacsImporter.importGraph(getClasspathFileReader(graphFile), nodeIds = false)
+    val graph = DimacsImporter.importGraph(ClasspathFileReader.build(graphFile), nodeIds = false)
     val iterations = 10
     val firstTieBreaker: (Graph<Int>, Collection<Int>) -> Iterable<Int> = ReducingTieBreakers::chooseMinDegree
     val secondTieBreaker: (Graph<Int>, Collection<Int>) -> Int  = FinalTieBreakers::chooseFirst

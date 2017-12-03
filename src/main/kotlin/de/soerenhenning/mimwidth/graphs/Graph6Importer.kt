@@ -1,3 +1,5 @@
+package de.soerenhenning.mimwidth.graphs
+
 import com.google.common.graph.GraphBuilder
 import com.google.common.graph.MutableGraph
 
@@ -5,7 +7,7 @@ object Graph6Importer {
 
     fun importGraph(graph6: String) : MutableGraph<Int> {
         val graphBuilder = GraphBuilder.undirected()
-        return importGraph(graph6, {n -> n} , graphBuilder)
+        return importGraph(graph6, { n -> n }, graphBuilder)
     }
 
     fun <V> importGraph(graph6: String, vertexBuilder: (Int) -> V, builder: GraphBuilder<Any?>): MutableGraph<V> {
@@ -16,9 +18,9 @@ object Graph6Importer {
         bytes.filter { it < 63 || it > 126 }
                 .forEach { throw IllegalArgumentException("Graph string seems to be corrupt. Illegal character detected: " + it) }
 
-        Reader<V>(bytes, vertexBuilder, graph).read();
+        Reader<V>(bytes, vertexBuilder, graph).read()
 
-        return graph;
+        return graph
     }
 
     private class Reader<V>(val bytes: ByteArray, val vertexBuilder: (Int) -> V, val graph: MutableGraph<V>) {

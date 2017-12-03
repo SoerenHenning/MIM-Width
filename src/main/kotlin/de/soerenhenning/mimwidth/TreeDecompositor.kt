@@ -1,7 +1,10 @@
+package de.soerenhenning.mimwidth
+
 import com.google.common.graph.EndpointPair
 import com.google.common.graph.Graph
 import com.google.common.graph.GraphBuilder
 import com.google.common.graph.Graphs
+import de.soerenhenning.mimwidth.graphs.createCut
 import java.util.*
 
 class TreeDecompositor<T>(

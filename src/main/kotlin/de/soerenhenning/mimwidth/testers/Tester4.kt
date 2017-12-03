@@ -1,3 +1,7 @@
+package de.soerenhenning.mimwidth.testers
+
+import de.soerenhenning.mimwidth.ClasspathFileReader
+import de.soerenhenning.mimwidth.graphs.DimacsImporter
 import java.nio.file.Files
 import java.nio.file.Paths
 import kotlin.streams.asSequence
@@ -10,7 +14,7 @@ fun main(args: Array<String>) {
             .asSequence()
             .map { it.fileName.toString() }
             .filter { try {
-                DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"), nodeIds = true)
+                DimacsImporter.importGraph(ClasspathFileReader.build("$directory/$it"), nodeIds = true)
                 return@filter true;
             } catch (e: Exception) {
                 return@filter false;

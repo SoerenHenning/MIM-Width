@@ -1,3 +1,5 @@
+package de.soerenhenning.mimwidth
+
 import com.google.common.graph.Graph
 
 data class TreeDecomposition<T>(

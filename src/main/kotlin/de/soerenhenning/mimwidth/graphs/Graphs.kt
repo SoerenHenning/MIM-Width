@@ -1,3 +1,5 @@
+package de.soerenhenning.mimwidth.graphs
+
 import com.google.common.graph.Graph
 import com.google.common.graph.GraphBuilder
 

@@ -1,4 +1,11 @@
+package de.soerenhenning.mimwidth.testers
+
 import com.google.common.graph.Graph
+import de.soerenhenning.mimwidth.ClasspathFileReader
+import de.soerenhenning.mimwidth.graphs.DimacsImporter
+import de.soerenhenning.mimwidth.FinalTieBreakers
+import de.soerenhenning.mimwidth.ReducingTieBreakers
+import de.soerenhenning.mimwidth.TreeDecompositor
 import java.io.InputStreamReader
 import java.io.BufferedReader
 import java.time.LocalDateTime
@@ -47,11 +54,11 @@ fun main(args: Array<String>) {
             //"school1-pp.dgf"
     )
 
-    val dimacsGraphs = dimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"))) }
-    val corruptedDimacsGraphs = corruptedDimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"),nodeIds = true)) }
+    val dimacsGraphs = dimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(ClasspathFileReader.build("$directory/$it"))) }
+    val corruptedDimacsGraphs = corruptedDimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(ClasspathFileReader.build("$directory/$it"),nodeIds = true)) }
     //val graphs = dimacsGraphs + corruptedDimacsGraphs
     val graphs = dimacsGraphs
-    //val graphs = mapOf("F}lzw" to Graph6Importer.importGraph("F}lzw"))
+    //val graphs = mapOf("F}lzw" to graphs.Graph6Importer.importGraph("F}lzw"))
     //val iterations = listOf(10, 50, 100)
     val iterations = listOf(10)
     val firstTieBreakers = mapOf<String, (Graph<Int>, Collection<Int>) -> Iterable<Int>>(
@@ -93,4 +100,4 @@ fun main(args: Array<String>) {
     printWriter.close()
 }
 
-fun getClasspathFileReader(file: String) = BufferedReader(InputStreamReader(DimacsImporter::class.java.getResourceAsStream(file)))
+//fun getClasspathFileReader(file: String) = BufferedReader(InputStreamReader(DimacsImporter::class.java.getResourceAsStream(file)))

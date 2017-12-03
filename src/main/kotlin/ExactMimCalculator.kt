@@ -17,19 +17,6 @@ class ExactMimCalculator<T>(private val graph: Graph<T>, private val treeDecompo
         return TreeDecomposition(tree, cutMimValues)
     }
 
-    //TODO copied
-    private fun <T> Graph<T>.createCut(oneSet: Set<T>, preserveVertices: Boolean = false) : Graph<T> {
-        val cut = GraphBuilder.from(this).build<T>()
-        if (preserveVertices) {
-            this.nodes().forEach { cut.addNode(it) }
-        }
-        this.edges()
-                .asSequence()
-                .filter { (oneSet.contains(it.nodeU()) && !oneSet.contains(it.nodeV())) || (!oneSet.contains(it.nodeU()) && oneSet.contains(it.nodeV())) }
-                .forEach { cut.putEdge(it.nodeU(), it.nodeV()) }
-        return cut
-    }
-
     private fun computeMim(graph: Graph<T>): Int {
         return when {
             isMimEqualsZero(graph) -> 0

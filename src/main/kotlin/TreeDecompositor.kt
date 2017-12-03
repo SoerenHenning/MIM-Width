@@ -54,7 +54,7 @@ class TreeDecompositor<T>(
             // mim(S) = if isolated 0 else 1
             val mimS = if (graph.degree(vertex) == 0) 0 else 1
             // mim(V-S) = <use heuristic>
-            val cut = createCut(graph, vertices.minus(vertex))
+            val cut = graph.createCut(vertices.minus(vertex))
             val mimVminusS = estimateMim(cut).size
             val maxMim = maxOf(mimS, mimVminusS)
             if (maxMim < smallestMim) {
@@ -135,18 +135,6 @@ class TreeDecompositor<T>(
     private fun <S> breakTieRandomly(edges: Collection<S>) : S {
         val x = this.random.nextInt(edges.size)
         return edges.asSequence().drop(x).first()
-    }
-
-    private fun createCut(graph: Graph<T>, oneSet: Set<T>, preserveVertices: Boolean = false) : Graph<T> {
-        val cut = GraphBuilder.undirected().build<T>()
-        if (preserveVertices) {
-            graph.nodes().forEach { cut.addNode(it) }
-        }
-        graph.edges()
-                .asSequence()
-                .filter { (oneSet.contains(it.nodeU()) && !oneSet.contains(it.nodeV())) || (!oneSet.contains(it.nodeU()) && oneSet.contains(it.nodeV())) }
-                .forEach { cut.putEdge(it.nodeU(), it.nodeV()) }
-        return cut
     }
 
 }

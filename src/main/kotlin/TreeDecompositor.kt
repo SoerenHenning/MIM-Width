@@ -6,9 +6,9 @@ import java.util.*
 
 class TreeDecompositor<T>(
         private val graph: Graph<T>,
-        private val firstTieBreaker: (Graph<T>, Collection<T>) -> Iterable<T> = ReducingTieBreakers::chooseMaxDegree,
-        private val secondTieBreaker: (Graph<T>, Collection<T>) -> T = FinalTieBreakers::chooseMaxNeighboursDegree,
-        private val iterations: Int = 5,
+        private val reducingTieBreaker: (Graph<T>, Collection<T>) -> Iterable<T> = ReducingTieBreakers::chooseMaxDegree,
+        private val finalTieBreaker: (Graph<T>, Collection<T>) -> T = FinalTieBreakers::chooseMaxNeighboursDegree,
+        private val randomRepetitions: Int = 5,
         private val random: Random = Random()
 ) {
 
@@ -72,11 +72,11 @@ class TreeDecompositor<T>(
         return if (vertices.size == 1) {
             vertices.first()
         } else {
-            val remainingVertices = firstTieBreaker(graph, vertices).toSet()
+            val remainingVertices = reducingTieBreaker(graph, vertices).toSet()
             if (remainingVertices.size == 1) {
                 remainingVertices.first()
             } else {
-                secondTieBreaker(graph, remainingVertices)
+                finalTieBreaker(graph, remainingVertices)
             }
         }
     }
@@ -92,7 +92,7 @@ class TreeDecompositor<T>(
      */
     private fun estimateMim(graph: Graph<T>) : Set<EndpointPair<T>> {
         var maximumInducedMatching = emptySet<EndpointPair<T>>()
-        for (i in 1..iterations) {
+        for (i in 1..randomRepetitions) {
             val remainingGraph = Graphs.copyOf(graph)
             val temporaryMaximumInducedMatching = HashSet<EndpointPair<T>>()
             while (remainingGraph.edges().isNotEmpty()) {

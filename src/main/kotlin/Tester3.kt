@@ -46,7 +46,7 @@ fun main(args: Array<String>) {
     val dimacsGraphs = dimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"))) }
     val corruptedDimacsGraphs = corruptedDimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"),nodeIds = true)) }
     //val graphs = dimacsGraphs + corruptedDimacsGraph
-    val graphs = ExampleGraphs.graphs.filter { it.graph.nodes().size in 0..50 }
+    val graphs = ExampleGraphs.graphs.filter { it.graph.nodes().size in 51..250 }
 
     val iterations = 10
     val firstTieBreaker: (Graph<Int>, Collection<Int>) -> Iterable<Int> = ReducingTieBreakers::chooseMinDegree

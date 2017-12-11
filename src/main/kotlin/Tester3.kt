@@ -46,7 +46,7 @@ fun main(args: Array<String>) {
     val dimacsGraphs = dimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"))) }
     val corruptedDimacsGraphs = corruptedDimacsGraphFiles.asSequence().map{ Pair(it, DimacsImporter.importGraph(getClasspathFileReader("$directory/$it"),nodeIds = true)) }
     //val graphs = dimacsGraphs + corruptedDimacsGraph
-    val graphs = ExampleGraphs.graphs.filter { it.graph.nodes().size in 251..500 }
+    val graphs = ExampleGraphs.graphs.filter { it.graph.nodes().size in 0..50 }
 
     val iterations = 10
     val firstTieBreaker: (Graph<Int>, Collection<Int>) -> Iterable<Int> = ReducingTieBreakers::chooseMinDegree
@@ -62,11 +62,7 @@ fun main(args: Array<String>) {
         val edgeDensity = (2 * numberOfEdges.toDouble()) / (numberOfVertices * (numberOfVertices - 1))
         val treeDecomposition = TreeDecompositor(graph, firstTieBreaker, secondTieBreaker, iterations, Random(42)).compute()
         val approximatedMim = treeDecomposition.mimValue
-        val exactMim = if (approximatedMim <= 2) {
-            ExactMimCalculator(graph, treeDecomposition).compute().mimValue
-        } else {
-            Int.MAX_VALUE
-        }
+        val exactMim = ExactMimCalculator(graph, treeDecomposition).compute().mimValue
         printWriter.println("'$graphName','$numberOfVertices','$numberOfEdges','$edgeDensity','$approximatedMim','${if (exactMim <= 2) exactMim.toString() else ""}'")
         printWriter.flush()
     }

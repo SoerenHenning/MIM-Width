@@ -47,6 +47,7 @@ class TreeDecompositor<T>(
 
     // Given Graph G=(V,E) and V' <= V
     // Choose S in V' s.t. max{mim(S), mim(V'-S}} is small
+    // Here S is a vertex set with exact one vertex
     private fun chooseVertex(vertices: Set<T>): Pair<T, Int> {
         if (vertices.isEmpty()) {
             throw IllegalArgumentException("Graph must have at least one vertex")
